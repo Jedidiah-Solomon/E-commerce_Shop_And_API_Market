@@ -1,0 +1,10 @@
+/* Function to use color based on font-size */
+@function set-color($font-size) {
+    @if $font-size >= 16px {
+      @return #222;
+    } @else {
+      @return #000106;
+    }
+  }
+  
+ 
