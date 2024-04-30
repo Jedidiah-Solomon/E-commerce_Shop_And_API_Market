@@ -21,4 +21,4 @@ E-commerce_Shop_And_API_Market is a website that shows e-commerce web products a
 
 ## Domain
 
-[E-commerce_Shop_And_API_Market](https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/)
+<a href="https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/" target="_blank">E-commerce_Shop_And_API_Market</a>
