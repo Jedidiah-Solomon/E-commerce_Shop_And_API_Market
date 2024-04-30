@@ -1,10 +1,38 @@
 /* Function to use color based on font-size */
-@function set-color($font-size) {
-    @if $font-size >= 16px {
-      @return #222;
-    } @else {
-      @return #000106;
-    }
+@function setColor($font-size) {
+  @if $font-size > 16px {
+    @return #222;
+  } @else {
+    @return #000106;
   }
-  
- 
+}
+
+/* Function to multiply size */
+@function sizeMultiplier($multiplier, $font-size) {
+  @if $multiplier >= 1 and $multiplier <= 4 {
+    @return $multiplier * $font-size;
+  } @else {
+    @warn "Multiplier must be between 1 and 4.";
+    @return $font-size;
+  }
+}
+
+
+@function sizeMultiplier($multiplier, $font-size) {
+  @debug "Multiplier: #{$multiplier}, Font-size: #{$font-size}";
+  @if $multiplier >= 0.90 and $multiplier <= 4 {
+    @return $multiplier * $font-size;
+  } @else if $multiplier > 4 and $multiplier <= 6 {
+    @warn "Multiplier is greater than 4 but less than or equal to 6. Returning original font-size: #{$font-size}";
+    @return $font-size;
+  } @else if $multiplier > 6 {
+    @error "Multiplier is greater than or equal to 6. This is not allowed. Given multiplier: #{$multiplier}";
+  }
+}
+
+
+
+
+
+   
+   
