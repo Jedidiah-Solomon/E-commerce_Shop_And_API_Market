@@ -14,5 +14,26 @@
       modeIcon.attr('src', iconSrc);
     });
   });
+
+
+  /* Drop down menu */
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownMenu = document.querySelector('.dropdown_menu');
+    const subMenu = dropdownMenu.querySelector('.dropdown');
+    const caretIcon = dropdownMenu.querySelector('.myFas');
+    subMenu.style.display = 'none';
+    caretIcon.style.transform = 'rotate(0deg)';
+
+    dropdownMenu.addEventListener('mouseenter', () => {
+      subMenu.style.display = 'block';
+      caretIcon.style.transform = 'rotate(180deg)';
+    });
+    
+    dropdownMenu.addEventListener('mouseleave', () => {
+      subMenu.style.display = 'none';
+      caretIcon.style.transform = 'rotate(0deg)';
+    });
+  });
+  
   
   

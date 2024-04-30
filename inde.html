@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your online store for the best APIs and e-commerce cloth deals."
+    />
+    <meta name="author" content="Jedybrown Stores" />
+    <meta name="keywords" content="e-commerce, APIs, online store" />
+    <link
+      rel="canonical"
+      href="https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/"
+    />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--JQUERY added from NPM Node Modules-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Minified js for bootstrap-->
+    <script src="./src/scripts/bootstrap.bundle.min.js"></script>
+    <!--League Spartan Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Minified style from bootstrap using Sass to CSS-->
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>E-commerce Shop & API Market</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="#"
+        ><img src="./public/img/logo.png" class="logo" alt="Logo"
+      /></a>
+      <div id="navbox">
+        <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="./src/pages/shop.html">Shop</a></li>
+          <li><a href="./src/pages/blog.html">Blog</a></li>
+          <li><a href="./src/pages/about.html">About</a></li>
+          <li><a href="./src/pages/contact.html">Contact</a></li>
+
+          <li class="dropdown_menu">
+            <a href="./src/pages/api.html"
+              >APIs <i class="fa-solid fa-caret-down myFas"></i
+            ></a>
+
+            <ul class="dropdown">
+              <li><a href="./src/pages/api1.html">APIs1</a></li>
+              <li><a href="./src/pages/api2.html">APIs2</a></li>
+              <li><a href="./src/pages/api3.html">APIs3</a></li>
+              <li><a href="./src/pages/api4.html">APIs4</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="./src/pages/cart.html"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <img
+        id="modeIcon"
+        class="dark-theme"
+        src="./public/img/dark-theme-icon/moon.png"
+        alt=""
+      />
+    </header>
+
+    <script>
+      // Wait for the DOM to be fully loaded
+      $(document).ready(function () {
+        // Mouse enter event handler for the dropdown menu
+        $(".dropdown_menu").mouseenter(function () {
+          // Show the dropdown submenu on hover
+          $(this).find(".dropdown").css("display", "block");
+        });
+
+        // Mouse leave event handler for the dropdown menu
+        $(".dropdown_menu").mouseleave(function () {
+          // Hide the dropdown submenu when mouse leaves
+          $(this).find(".dropdown").css("display", "none");
+        });
+      });
+    </script>
+  </body>
+</html>
