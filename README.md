@@ -19,7 +19,7 @@ E-commerce_Shop_And_API_Market is a website that shows e-commerce web products a
 2. Font Awesome 6.5.0 (Using CDNJS)
 3. Google font - League Spartan
 
-![APP1](./App1.PNG)
+![APP1](App1.PNG)
 ![APP2](App2.PNG)
 ![APP3](App3.PNG)
 ![APP4](App4.PNG)
