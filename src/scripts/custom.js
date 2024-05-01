@@ -36,4 +36,44 @@
   });
   
   
+  // Handle Newsletter form and Reset Form on submission | Sends user to home page
+  $(function() {
+    $('#form').on('submit', function(e) {
+      e.preventDefault(); // Prevent the form from submitting normally
+
+      $.ajax({
+        url: 'https://formspree.io/f/xrgnjzpb',
+        method: 'POST',
+        dataType: 'json',
+        data: $(this).serialize(),
+        success: function(response, status, xhr) {
+          console.log('XHR status:', xhr.status);
+          console.log('XHR statusText:', xhr.statusText);
+          console.log('XHR responseText:', xhr.responseText);
   
+          $('#form')[0].reset();
+          alert('Thank you for signing up!');
+          window.location.href = '../../index.html'; // Redirect to the home page
+        },
+        error: function(xhr, status, error) {
+          console.log(xhr); // Log the xhr object to inspect the error
+          console.error(error); // Log the error object to inspect the error
+          console.log('XHR status:', xhr.status);
+          console.log('XHR statusText:', xhr.statusText);
+          console.log('XHR responseText:', xhr.responseText);
+  
+          alert('Oops! Something went wrong. Please try again.'); 
+        }
+      });
+    });
+  });
+  
+
+  // Google Web Page ranslate
+
+  function googleTranslateElementInit(){
+    new google.translate.TranslateElement(
+        {pageLanguage: 'en'},
+        'google_translate_element'
+    );
+}

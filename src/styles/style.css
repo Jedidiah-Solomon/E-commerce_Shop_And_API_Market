@@ -12355,6 +12355,14 @@ button.white {
   border-bottom-right-radius: 0;
 }
 
+#newsletter input[type=email]:focus:invalid {
+  border: 2px solid red;
+}
+
+#newsletter input[type=email]:valid {
+  border: 2px solid #088178;
+}
+
 #newsletter button {
   background-color: #088178;
   color: #fff;
@@ -12426,4 +12434,38 @@ footer .myCol .install img {
 
 .follow .icon a[href*="youtube.com"] i {
   color: #FF0000;
+}
+
+/* Customize the appearance of the google translate dropdown */
+#google_translate_element .goog-te-combo {
+  width: 200px; /* Set a specific width */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #088178;
+  color: #333;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+#google_translate_element .goog-te-combo option:hover {
+  background-color: #088178;
+}
+
+#google_translate_element .goog-te-combo option {
+  font-size: 16px;
+  background-color: #088178;
+  color: #fff;
+}
+
+#google_translate_element .goog-te-combo option:nth-child(1) {
+  font-size: 16px;
+  background-color: #088178;
+  color: #000106;
+}
+
+p.copy {
+  font-size: 20px;
+  margin-bottom: 10px !important;
 }

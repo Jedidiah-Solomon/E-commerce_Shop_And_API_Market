@@ -424,10 +424,12 @@
             <span>special offers.</span>
           </p>
         </div>
+        <!--Using Formspree to collect the mails. You can use mailchimp. See documentation-->
         <form
           action="https://formspree.io/f/xrgnjzpb"
           method="POST"
           class="form"
+          id="form"
         >
           <input
             type="email"
@@ -454,19 +456,25 @@
         <div class="follow">
           <h4>Follow Us</h4>
           <div class="icon">
-            <a href="https://web.facebook.com/"
+            <a href="https://web.facebook.com/" target="_blank"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a href="https://twitter.com/OnwubikoSolomo2"
+            <a href="https://twitter.com/OnwubikoSolomo2" target="_blank"
               ><i class="fab fab fa-twitter"></i
             ></a>
-            <a href="https://www.instagram.com/jedidiahonwubiko/"
+            <a
+              href="https://www.instagram.com/jedidiahonwubiko/"
+              target="_blank"
               ><i class="fab fab fa-instagram"></i
             ></a>
-            <a href="https://www.linkedin.com/in/jedidiahonwubiko/"
+            <a
+              href="https://www.linkedin.com/in/jedidiahonwubiko/"
+              target="_blank"
               ><i class="fab fab fab fa-linkedin"></i
             ></a>
-            <a href="https://www.youtube.com/channel/UCokFadwyrGzW8p0tiST9RuQ"
+            <a
+              href="https://www.youtube.com/channel/UCokFadwyrGzW8p0tiST9RuQ"
+              target="_blank"
               ><i class="fab fab fa-youtube"></i
             ></a>
           </div>
@@ -502,8 +510,12 @@
         <img src="./public/img/pay/pay.png" alt="" />
       </div>
     </footer>
-    <p class="text-center">&copy; 2024, Jedybrown Ventures - Web Developer</p>
+    <div class="text-center" id="google_translate_element"></div>
+    <p class="text-center" style="font-size: 20px">
+      &copy; 2024, Jedybrown Ventures - Web Developer
+    </p>
 
     <script src="./src/scripts/custom.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>

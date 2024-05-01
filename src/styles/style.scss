@@ -545,6 +545,15 @@
   border-bottom-right-radius: 0;
 }
 
+
+#newsletter input[type="email"]:focus:invalid {
+  border: 2px solid red; 
+}
+
+#newsletter input[type="email"]:valid {
+  border: 2px solid $hover-color; 
+}
+
 #newsletter button {
   background-color: $hover-color;
   color: #fff;
@@ -625,4 +634,40 @@ footer .myCol .install img {
 
 .follow .icon a[href*="youtube.com"] i {
   color: #FF0000; 
+}
+
+
+/* Customize the appearance of the google translate dropdown */
+#google_translate_element .goog-te-combo {
+  width: 200px; /* Set a specific width */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: $hover-color;
+  color: #333;
+  font-weight: 800;
+  font-size: sizeMultiplier(1, $base-font-size);
+}
+
+#google_translate_element .goog-te-combo option:hover {
+  background-color: $hover-color;
+}
+
+
+#google_translate_element .goog-te-combo option {
+  font-size: 16px;
+  background-color: $hover-color;
+  color: #fff;
+}
+
+#google_translate_element .goog-te-combo option:nth-child(1) {
+  font-size: 16px;
+  background-color: $hover-color;
+  color: $black-mode;
+}
+
+p.copy {
+  font-size: 20px;
+  margin-bottom: 10px !important;
 }
