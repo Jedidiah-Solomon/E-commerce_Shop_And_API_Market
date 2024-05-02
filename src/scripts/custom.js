@@ -18,37 +18,37 @@ if(close) {
  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Light and Dart Theme toggle */
   $(function() {
     // Cache the selectors
     const modeIcon = $('#modeIcon');
     const body = $('body');
+    const mainElement = $('main'); 
+    const footerElement = $('footer'); 
+  
+  
     // Store the image paths
     const moonImg = '../../public/img/dark-theme-icon/moon.png';
     const sunImg = '../../public/img/dark-theme-icon/sun.png';
-    
+  
     // Add click event listener to the mode icon
     modeIcon.on('click', function() {
       body.toggleClass('dark-theme');
       const iconSrc = body.hasClass('dark-theme') ? sunImg : moonImg;
       modeIcon.attr('src', iconSrc);
+  
+      // Add or remove the class based on dark theme state
+      //You can just add each box individually
+      if (body.hasClass('dark-theme')) {
+        mainElement.addClass('white-bg'); 
+        footerElement.addClass('white-bg'); 
+      } else {
+        mainElement.removeClass('white-bg'); 
+        footerElement.removeClass('white-bg'); 
+      }
     });
   });
+  
 
 
   /* Drop down menu */
