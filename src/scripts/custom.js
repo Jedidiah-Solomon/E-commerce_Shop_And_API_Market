@@ -1,3 +1,38 @@
+//Mobile Hamburgar Menu
+const bar = document.getElementById('bar');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
+
+
+if(bar) {
+  bar.addEventListener('click', () => {
+      nav.classList.add('active');
+  });
+};
+ 
+if(close) {
+  close.addEventListener('click', () => {
+      nav.classList.remove('active');
+  });
+};
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Light and Dart Theme toggle */
   $(function() {
     // Cache the selectors
@@ -24,16 +59,18 @@
     subMenu.style.display = 'none';
     caretIcon.style.transform = 'rotate(0deg)';
 
-    dropdownMenu.addEventListener('mouseenter', () => {
-      subMenu.style.display = 'block';
-      caretIcon.style.transform = 'rotate(180deg)';
+    // Toggle the submenu on click
+    dropdownMenu.addEventListener('click', () => {
+        if (subMenu.style.display === 'none') {
+            subMenu.style.display = 'block';
+            caretIcon.style.transform = 'rotate(180deg)';
+        } else {
+            subMenu.style.display = 'none';
+            caretIcon.style.transform = 'rotate(0deg)';
+        }
     });
-    
-    dropdownMenu.addEventListener('mouseleave', () => {
-      subMenu.style.display = 'none';
-      caretIcon.style.transform = 'rotate(0deg)';
-    });
-  });
+});
+
   
   
   // Handle Newsletter form and Reset Form on submission | Sends user to home page
@@ -77,3 +114,5 @@
         'google_translate_element'
     );
 }
+
+

@@ -39,7 +39,7 @@
 
   <body>
     <header id="header">
-      <a href="#"
+      <a href="index.html"
         ><img src="./public/img/logo.png" class="logo" alt="Logo"
       /></a>
       <div id="navbox">
@@ -51,7 +51,7 @@
           <li><a href="./src/pages/contact.html">Contact</a></li>
 
           <li class="dropdown_menu">
-            <a href="./src/pages/api.html"
+            <a href="javascript:void(0)"
               >APIs <i class="fa-solid fa-caret-down myFas"></i
             ></a>
 
@@ -63,11 +63,12 @@
             </ul>
           </li>
 
-          <li>
+          <li id="lg-bag">
             <a href="./src/pages/cart.html"
               ><i class="fa-solid fa-bag-shopping"></i
             ></a>
           </li>
+          <a href="#" id="close"><i class="far fas fa-times"></i></a>
         </ul>
       </div>
 
@@ -77,6 +78,13 @@
         src="./public/img/dark-theme-icon/moon.png"
         alt=""
       />
+
+      <div id="mobile">
+        <a href="./src/pages/cart.html"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
     </header>
     <main>
       <section id="hero">
@@ -511,7 +519,7 @@
       </div>
     </footer>
     <div class="text-center" id="google_translate_element"></div>
-    <p class="text-center" style="font-size: 20px">
+    <p class="text-center copy" style="font-size: 20px">
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
 
