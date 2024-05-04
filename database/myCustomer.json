@@ -1,0 +1,32 @@
+{
+    "customers": [
+      {
+        "customerName": "John Doe",
+        "details": {
+          "productName": "Widget X",
+          "selectedSize": "Medium",
+          "unitPrice": 19.99,
+          "mainImageSrc": "https://example.com/widget_x_image.jpg"
+        }
+      },
+      {
+        "customerName": "Jane Smith",
+        "details": {
+          "productName": "Gizmo Y",
+          "selectedSize": "Large",
+          "unitPrice": 24.99,
+          "mainImageSrc": "https://example.com/gizmo_y_image.jpg"
+        }
+      },
+      {
+        "customerName": "Alex Johnson",
+        "details": {
+          "productName": "Thingamabob Z",
+          "selectedSize": "Small",
+          "unitPrice": 14.99,
+          "mainImageSrc": "https://example.com/thingamabob_z_image.jpg"
+        }
+      }
+    ]
+  }
+  

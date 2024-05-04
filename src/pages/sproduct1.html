@@ -129,17 +129,18 @@
         </div>
         <div class="single-pro-details">
           <h6>Home / T-shirts</h6>
-          <h4>Barcelona Astronaut T-Shirts</h4>
-          <h2>₦1000.50</h2>
+          <h4 id="pro-name">Barcelona Astronaut T-Shirts</h4>
+          <h2 id="pro-price">₦1000.50</h2>
           <select>
-            <option>Select Size</option>
-            <option>XL</option>
-            <option>XXL</option>
-            <option>Small</option>
-            <option>Large</option>
+            <option value="noproduct">Select Size</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+            <option value="small">Small</option>
+            <option value="large">Large</option>
           </select>
-          <input type="number" min="1" value="1" />
-          <button class="normal">Add To Cart</button>
+
+          <input id="pro-qty" type="number" min="1" value="1" />
+          <button id="pro-btn" class="normal">Add To Cart</button>
           <h4>Product Details</h4>
           <span
             >Take comfort to the next level with adidas men's tees and sports
@@ -324,8 +325,8 @@
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
 
-    <script src="../scripts/single-product1.js"></script>
     <script src="../scripts/custom.js"></script>
+    <script src="../scripts/single-product1.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>

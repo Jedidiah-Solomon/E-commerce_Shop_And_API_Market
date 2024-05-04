@@ -16,3 +16,44 @@ IF you want to use mailchimps, you can simply get your embedded form action attr
           />
           <button type="submit" class="normal">Sign Up</button>
         </form>
+
+    
+
+** PAYSTACK PAYMENT **
+Note:
+onClose handles closure of the payment modal without successful payment.
+cancel_action handles explicit cancellation or failure of the payment.
+
+onClose:
+The onClose function is triggered when the Paystack payment modal is closed without the payment being successfully completed. This can happen if the user simply closes the payment modal without proceeding to make a payment, regardless of the reason.
+Use onClose to provide feedback to the user about the closure of the modal without completing the payment. It's useful for handling scenarios where the user exits the payment process prematurely.
+cancel_action:
+The cancel_action is specifically triggered when the payment is explicitly canceled or encounters a failure during the payment process. This could occur due to actions initiated by the user to cancel the payment or if the payment fails due to validation issues, declined transactions, or other errors.
+Use cancel_action to handle explicit cancellations or failures that occur during the payment process, providing a specific action or URL to redirect the user in response to these events.
+Example Scenarios:
+
+onClose:
+Scenario: The user opens the Paystack payment modal but decides to close it without proceeding to make a payment.
+Action: The onClose function is triggered to display a message like "Transaction was not completed, window closed." It can also include a delayed redirect (setTimeout) to another page for further action or instruction.
+cancel_action:
+Scenario: The user initiates a payment but encounters an issue during the process, resulting in explicit cancellation or a payment failure.
+Action: Paystack recognizes the cancellation or failure event and triggers the cancel_action, which directs the user to a designated URL like index.html to handle the situation (e.g., provide alternative payment options or support).
+
+onClose:
+The onClose function is triggered when the Paystack payment modal is closed without the payment being successfully completed. This can happen if the user simply closes the payment modal without proceeding to make a payment, regardless of the reason.
+Use onClose to provide feedback to the user about the closure of the modal without completing the payment. It's useful for handling scenarios where the user exits the payment process prematurely.
+cancel_action:
+The cancel_action is specifically triggered when the payment is explicitly canceled or encounters a failure during the payment process. This could occur due to actions initiated by the user to cancel the payment or if the payment fails due to validation issues, declined transactions, or other errors.
+Use cancel_action to handle explicit cancellations or failures that occur during the payment process, providing a specific action or URL to redirect the user in response to these events.
+Example Scenarios:
+
+onClose:
+Scenario: The user opens the Paystack payment modal but decides to close it without proceeding to make a payment.
+Action: The onClose function is triggered to display a message like "Transaction was not completed, window closed." It can also include a delayed redirect (setTimeout) to another page for further action or instruction.
+cancel_action:
+Scenario: The user initiates a payment but encounters an issue during the process, resulting in explicit cancellation or a payment failure.
+Action: Paystack recognizes the cancellation or failure event and triggers the cancel_action, which directs the user to a designated URL like index.html to handle the situation (e.g., provide alternative payment options or support).
+In summary, onClose handles any closure of the payment modal without successful payment, regardless of the reason for closure. On the other hand, cancel_action specifically addresses explicit cancellations or failures that occur during the payment process, providing a targeted response to these events. Each serves a distinct purpose in managing user interactions and feedback during the payment flow.
+In summary, onClose handles any closure of the payment modal without successful payment, regardless of the reason for closure. On the other hand, cancel_action specifically addresses explicit cancellations or failures that occur during the payment process, providing a targeted response to these events. Each serves a
+ distinct purpose in managing user interactions and feedback during the payment flow.
+       
