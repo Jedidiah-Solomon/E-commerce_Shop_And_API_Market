@@ -1,5 +1,17 @@
 /* Islamic Prayer API - Aladhan */ 
 
+
+// style.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Then add additional custom code here
+
 #aladhan-prayer {
     display: flex;
     justify-content: space-between;
@@ -92,4 +104,38 @@
     padding: 10px;
     background-color: #fff; 
     border-radius: 5px;
+}
+
+
+/* Media Queries */
+@media (max-width: 799px) { 
+    /* Global style */
+
+
+
+}
+
+
+/* Iphone x */
+@media (max-width: 477px) {
+    #aladhan-prayer {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #prayer-details, #prayer-results {
+        width: 100%;
+        margin: 10px;
+        padding: 30px 5px;
+    }
+
+    #prayer-details form h3 {
+        font-size: 20px;
+    }
+
+    
+   
+
+
+  
+
 }

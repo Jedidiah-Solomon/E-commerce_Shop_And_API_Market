@@ -24,7 +24,15 @@ E-commerce_Shop_And_API_Market is a website that shows e-commerce web products a
 ![APP3](App3.PNG)
 ![APP4](App4.PNG)
 ![APP5](App5.PNG)
+![Aladhan](./public/img/others/alahdan.png)
 
 ## Domain
 
 <a href="https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/" target="_blank">E-commerce_Shop_And_API_Market</a>
+
+**Run with Localhost if your port is 5500**
+
+```
+http://127.0.0.1:5500/index.html
+
+```
