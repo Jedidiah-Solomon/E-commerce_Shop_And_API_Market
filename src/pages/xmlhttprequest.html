@@ -34,7 +34,8 @@
 
     <!--Minified style from bootstrap using Sass to CSS-->
     <link rel="stylesheet" href="../styles/style.css" />
-    <title>E-commerce Shop & API Market</title>
+    <link rel="stylesheet" href="../styles/xmlhttprequest.css" />
+    <title>XMLHTTPREQUEST - AJAX</title>
   </head>
 
   <body>
@@ -48,10 +49,10 @@
           <li><a href="shop.html">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
 
           <li class="dropdown_menu">
-            <a href="javascript:void(0)"
+            <a class="active" href="javascript:void(0)"
               >APIs <i class="fa-solid fa-caret-down myFas"></i
             ></a>
 
@@ -84,145 +85,84 @@
     </header>
 
     <main>
-      <section id="page-header" class="about-header">
-        <h2>#Let's Talk</h2>
-        <p>LEAVE A MESSAGE, We love to hear from you!</p>
-      </section>
-
-      <section id="contact-details" class="section-p1">
-        <div class="details">
-          <span>GET IN TOUCH</span>
-          <h2>Visit one of our agency locations or contact us today</h2>
-          <h3>Head Office</h3>
-
-          <div>
-            <li>
-              <i class="far fa-map"></i>
-              <p>22 Ijede Road Itamaga, Ikorodu, Lagos, Nigeria</p>
-            </li>
-            <li>
-              <i class="far far fa-envelope"></i>
-              <p>jedybrownventures@gmail.com</p>
-            </li>
-            <li>
-              <i class="far fas fa-phone-alt"></i>
-              <p>07062957194</p>
-            </li>
-            <li>
-              <i class="far far fa-clock"></i>
-              <p>Monday to Saturday: 9:00 to 16:00 WAT</p>
-            </li>
-          </div>
-        </div>
-
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.123059329175!2d3.534887073213914!3d6.631634821900983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bef80e871023f%3A0x9434588818d05db2!2sBathphage%20Computer%20Center!5e0!3m2!1sen!2sng!4v1714658652808!5m2!1sen!2sng"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
-
-      <section id="form-details">
-        <form
-          action="https://webbrainees.us14.list-manage.com/subscribe/post?u=fd596490f33b374b61086a819&amp;id=e4a452051c&amp;f_id=0006f8e0f0"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          class="validate"
-          target="_self"
-        >
-          <span>LEAVE A MESSAGE</span>
-          <h2>We love to hear from you</h2>
-          <input
-            type="text"
-            name="FNAME"
-            class="required text"
-            id="mce-FNAME"
-            value=""
-            placeholder="First Name"
-            required
-          />
-          <input
-            type="email"
-            name="EMAIL"
-            class="required email"
-            id="mce-EMAIL"
-            value=""
-            placeholder="Email"
-            required
-          />
-          <input
-            type="text"
-            name="MMERGE1"
-            class="required text"
-            id="mce-MMERGE1"
-            value=""
-            placeholder="Subject"
-            required
-          />
-          <textarea
-            name="MMERGE3"
-            class="required text"
-            id="mce-MMERGE3"
-            value=""
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button
-            type="submit"
-            name="subscribe"
-            id="mc-embedded-subscribe"
-            class="button normal"
+      <section id="xmlhttprequest" class="section-p1">
+        <div id="userRequestBox">
+          <h2>Using the XMLHttpRequest Object</h2>
+          <label for="userInput" class="text-center"
+            >Enter a User full name</label
           >
-            Submit
-          </button>
-        </form>
+          <div class="input">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Enter user name..."
+            />
+            <button type="button" id="userBtn">Retrieve User Details</button>
+          </div>
+          <div id="userDetails"></div>
+          <p id="errorBox" class="text-danger text-center h5"></p>
 
-        <div class="people">
-          <div>
-            <img src="../../public/img/people/1.png" alt="" />
-            <p>
-              <span>John Paul</span> Senior Sales Manager <br />
-              Phone: +2348034345467 <br />
-              Email: contact@example.com
-            </p>
+          <div id="user-names">
+            <ul>
+              <li><b>Pick any names here or try wrong ones</b></li>
+              <li>John Paul</li>
+              <li>Jane Smith</li>
+              <li>Michael Johnson</li>
+              <li>Emily Brown</li>
+              <li>Daniel Wilson</li>
+              <li>Sophia Miller</li>
+              <li>Matthew Taylor</li>
+              <li>Olivia Anderson</li>
+              <li>Ethan Garcia</li>
+              <li>Isabella Martinez</li>
+            </ul>
           </div>
+        </div>
+
+        <div id="info">
+          <h3 class="text-center">XMLHttpRequest</h3>
+          <p>
+            XMLHttpRequest is an API provided by
+            <strong>web browsers </strong>that allows JavaScript to make HTTP
+            requests to servers. It is the foundational technology behind AJAX
+            (Asynchronous JavaScript and XML) and is commonly used to fetch data
+            from a server asynchronously without needing to reload the entire
+            web page. XML (Extensible Markup Language). Key features and usage
+            of XMLHttpRequest include: <b>Asynchronous Operations:</b> The
+            requests made with XMLHttpRequest are asynchronous by default. This
+            means that JavaScript execution will continue while the request is
+            being processed, and a callback function is used to handle the
+            response when it arrives.
+            <b>Cross-Origin Requests:</b> XMLHttpRequest supports making
+            requests to domains other than the one hosting the current web page
+            (cross-origin requests). However, this is subject to the same-origin
+            policy, which restricts certain actions due to security
+            considerations. <b>HTTP Methods:</b> It supports various HTTP
+            methods like GET, POST, PUT, DELETE, etc., allowing developers to
+            perform different types of operations on a server.
+            <b>Handling Responses:</b> Responses from the server can be
+            retrieved in different formats like text, JSON, XML, etc. The
+            response can be processed in the callback function defined for
+            XMLHttpRequest. <b>Event-Driven API:</b> XMLHttpRequest uses event
+            listeners to monitor the progress of requests (e.g., onload,
+            onreadystatechange, onerror, etc.).
+          </p>
+          <h3>Summary - Uses of XMLHttpRequest</h3>
           <div>
-            <img src="../../public/img/people/2.png" alt="" />
-            <p>
-              <span>Bill Gate</span> General Manager <br />
-              Phone: +2348034005467 <br />
-              Email: contact@example.com
-            </p>
+            <ul>
+              <li>Update a web page without reloading the page</li>
+              <li>Request data from a server - after the page has loaded</li>
+              <li>Receive data from a server - after the page has loaded</li>
+              <li>Data to a server - in the background</li>
+            </ul>
           </div>
-          <div>
-            <img src="../../public/img/people/3.png" alt="" />
-            <p>
-              <span>Lilian Bezos</span> Design and Modelling Personnel <br />
-              Phone: +2348034345467 <br />
-              Email: contact@example.com
-            </p>
+          <div class="text-center">
+            <a href="https://www.convertcsv.com/csv-to-json.htm" target="_blank"
+              >TO CONVERT CSV TO JSON</a
+            >
           </div>
         </div>
       </section>
-      <div
-        id="success-message"
-        class="text-center fs-4 fw-bold"
-        style="color: green"
-      ></div>
-      <div
-        id="error-message"
-        class="text-center fs-4 fw-bold"
-        style="color: red"
-      ></div>
 
       <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -324,7 +264,7 @@
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
 
-    <script src="../scripts/contact.js"></script>
+    <script src="../scripts/xmlhttprequest.js"></script>
     <script src="../scripts/custom.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>

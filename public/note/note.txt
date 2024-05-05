@@ -56,4 +56,23 @@ Action: Paystack recognizes the cancellation or failure event and triggers the c
 In summary, onClose handles any closure of the payment modal without successful payment, regardless of the reason for closure. On the other hand, cancel_action specifically addresses explicit cancellations or failures that occur during the payment process, providing a targeted response to these events. Each serves a distinct purpose in managing user interactions and feedback during the payment flow.
 In summary, onClose handles any closure of the payment modal without successful payment, regardless of the reason for closure. On the other hand, cancel_action specifically addresses explicit cancellations or failures that occur during the payment process, providing a targeted response to these events. Each serves a
  distinct purpose in managing user interactions and feedback during the payment flow.
+
+
+ XMLHTTPREQUEST
+
+ XMLHttpRequest Setup:
+const xhr = new XMLHttpRequest();: This line initializes a new instance of the XMLHttpRequest object, which is used to interact with servers and make HTTP requests.
+Event Listener (onreadystatechange):
+xhr.onreadystatechange = function() { ... }: This event handler is triggered whenever the readyState property of the XMLHttpRequest object changes. The readyState property represents the state of the request:
+0 (UNSENT): The XMLHttpRequest object has been created, but open() has not been called yet.
+1 (OPENED): open() has been called.
+2 (HEADERS_RECEIVED): send() has been called and headers and status are available.
+3 (LOADING): Downloading; responseText holds partial data.
+4 (DONE): The operation is complete.
+Handling Response:
+if (this.readyState == 4) { ... }: Checks if the request is complete (readyState is 4), indicating that the server response is fully loaded.
+Successful Response (status == 200):
+if (this.status == 200) { ... }: Checks if the HTTP status code is 200 (OK), indicating a successful request.
+Parsing JSON Response:
+const data = JSON.parse(this.responseText);: Once the request is complete and successful, the responseText property of the XMLHttpRequest object contains the response data from the server as a string. JSON.parse() is used to convert this JSON-formatted string into a JavaScript object (data), which can then be processed and used in the application.
        

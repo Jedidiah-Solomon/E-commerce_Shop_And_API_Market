@@ -1,0 +1,193 @@
+/* Islamic Prayer API - Aladhan */ 
+
+
+// style.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Then add additional custom code here
+
+/* Styling the main section */
+#xmlhttprequest {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  #userRequestBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+  
+    label {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  
+    .input {
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+    
+      
+      input[type='text'] {
+        flex: 1; 
+        padding: 10px;
+        border: 1.5px solid #D3D3D3;
+        font-size: 16px;
+        transition: box-shadow 0.5s;
+        height: 100%; // Match button height
+        margin-right: 10px;
+  
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 5px 0.5px #D3D3D3;
+          border: none;
+          outline: none;
+        }
+      }
+  
+      button {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: #fff;
+        background-color: #088178;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: box-shadow 0.5s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 100%; 
+  
+        &:hover {
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+          opacity: 0.75;
+        }
+  
+        &:focus {
+          box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  
+    #errorBox {
+      margin-top: 10px;
+    }
+  
+    #user-names {
+      margin-top: 20px;
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  
+
+ 
+  #info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
+
+  #info p {
+    text-align: justify;
+  }
+
+  #info a {
+    text-decoration: none;
+    color: #088178;
+    font-weight: 700;
+  }
+
+
+  
+/* Media Queries */
+
+/*Ipad*/
+@media (max-width: 799px) {
+    #userRequestBox { 
+        width: 40%;
+
+        h2 {
+            font-size: 14.5px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .input {
+            flex-direction: column;
+            align-items: normal;
+
+            input[type='text'] {
+                margin-bottom: 8px;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    #info {
+        width: 60%;
+        h3 {
+            font-size: 14.5px;
+            text-align: center;
+            font-weight: 700;
+          }
+    }
+
+}
+
+
+
+
+
+
+
+/* Iphone x */
+@media (max-width: 477px) {
+    #xmlhttprequest {
+        flex-direction: column;
+
+        #userRequestBox {
+            width: 100%;
+          }
+    
+          #info {
+            width: 100%;
+            margin-left: 0;
+          }
+      }
+
+      
+
+
+}
+  
