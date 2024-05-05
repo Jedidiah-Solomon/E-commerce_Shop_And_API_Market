@@ -1,0 +1,95 @@
+/* Islamic Prayer API - Aladhan */ 
+
+#aladhan-prayer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    color: white;
+    background-color: black;
+    background-image: url('https://cdn.aladhan.com/images/backgrounds/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+#prayer-details {
+    width: 60%;
+    margin-right: 20px;
+}
+
+
+#prayer-results {
+    width: 40%;
+}
+
+/* Form container styling */
+#prayer-details form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#prayer-details form h3 {
+    color: rgb(255, 189, 39);
+   
+}
+
+#prayer-details form h5 {
+    color: #fff;
+    font-weight: 700;
+   
+}
+
+#prayer-details form input, #prayer-details form select {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+/* Styling for the button */
+#prayer-details form button {
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-in-out;
+}
+
+#prayer-details form button:hover {
+    opacity: 0.8;
+}
+
+
+/* Styling for the prayer results section */
+#prayer-results {
+    width: 40%;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling for the app container */
+#app {
+    padding: 10px;
+    background-color: #fff; 
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the countdown timer */
+#countDownTimer {
+    padding: 10px;
+    background-color: #fff; 
+    border-radius: 5px;
+}

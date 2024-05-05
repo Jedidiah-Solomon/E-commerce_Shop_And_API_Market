@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your online store for the best APIs and e-commerce cloth deals."
+    />
+    <meta name="author" content="Jedybrown Stores" />
+    <meta name="keywords" content="e-commerce, APIs, online store" />
+    <link
+      rel="canonical"
+      href="https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/"
+    />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--JQUERY added from NPM Node Modules-->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Minified js for bootstrap-->
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <!--League Spartan Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Minified style from bootstrap using Sass to CSS-->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/islamic_prayer.css" />
+    <title>Islamic Prayer API - Aladhan</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <a href="../../index.html"
+        ><img src="../../public/img/logo.png" class="logo" alt="Logo"
+      /></a>
+      <div id="navbox">
+        <ul id="navbar">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          <li class="dropdown_menu">
+            <a class="active" href="javascript:void(0)"
+              >APIs <i class="fa-solid fa-caret-down myFas"></i
+            ></a>
+
+            <ul class="dropdown">
+              <li><a href="islamic_prayer.html">Islamic Prayer</a></li>
+              <li><a href="api2.html">APIs2</a></li>
+              <li><a href="api3.html">APIs3</a></li>
+              <li><a href="api4.html">APIs4</a></li>
+            </ul>
+          </li>
+
+          <li id="lg-bag">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fas fa-times"></i></a>
+        </ul>
+      </div>
+
+      <img
+        id="modeIcon"
+        class="dark-theme"
+        src="../../public/img/dark-theme-icon/moon.png"
+        alt=""
+      />
+
+      <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </header>
+
+    <main>
+      <section id="aladhan-prayer" class="section-p1">
+        <div id="prayer-details">
+          <form>
+            <h3>Islamic Prayer Times - Worldwide</h3>
+
+            <input type="text" id="userInput" placeholder="Enter Your City" />
+
+            <h5>Select Country</h5>
+            <select id="country">
+              <option value=""></option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+
+              <option value="Nigeria">Nigeria</option>
+              <option value="Algeria">Algeria</option>
+              <option value="Angola">Angola</option>
+              <option value="Benin">Benin</option>
+              <option value="Botswana">Botswana</option>
+
+              <option value="China">China</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Bangladesh">Bangladesh</option>
+
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+              <option value="Italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Ukraine">Ukraine</option>
+
+              <option value="Canada">Canada</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Panama">Panama</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Costa Rica">Costa Rica</option>
+
+              <option value="Brazil">Brazil</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Chile">Chile</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Peru">Peru</option>
+
+              <option value="Australia">Australia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+
+              <option value="None">None (Antarctica has no countries)</option>
+            </select>
+
+            <h5>Prayer Method</h5>
+            <select id="prayerMethod">
+              <option value=""></option>
+              <option value="0">Shia Ithna-Ashari, Leva Institute, Qum</option>
+              <option value="1">University of Islamic Sciences, Karachi</option>
+              <option value="2">Islamic Society of North America</option>
+              <option value="3">Muslim World League</option>
+              <option value="4">Umm Al-Qura University, Makkah</option>
+              <option value="5">Egyptian General Authority of Survey</option>
+              <option value="7">
+                Institute of Geophysics, University of Tehran
+              </option>
+              <option value="8">Gulf Region</option>
+              <option value="9">Kuwait</option>
+              <option value="10">Qatar</option>
+              <option value="11">
+                Majlis Ugama Islam Singapura, Singapore
+              </option>
+              <option value="12">Union Organization islamic de France</option>
+              <option value="13">Diyanet İşleri Başkanlığı, Turkey</option>
+              <option value="14">
+                Spiritual Administration of Muslims of Russia
+              </option>
+              <option value="15">Moonsighting Committee</option>
+              <option value="16">Dubai, UAE</option>
+              <option value="17">
+                Jabatan Kemajuan Islam Malaysia (JAKIM)
+              </option>
+              <option value="18">Tunisia</option>
+              <option value="19">Algeria</option>
+              <option value="20">Kementerian Agama Republik Indonesia</option>
+              <option value="21">Morocco</option>
+              <option value="22">
+                Comunidate Islamica de Lisboa (Portugal)
+              </option>
+            </select>
+
+            <h5>Select Date<h5>
+            <select id="date">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+
+            <h5>Select Month</h5>
+            <select id="month">
+              <option value=""></option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+
+            <h5>Select Year</h5>
+            <select id="year">
+              <option value=""></option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+            </select> <br>
+
+            <button type="button" id="checkPrayerTime" class="normal">
+              Check Prayer Time
+            </button>
+          </form>
+        </div>
+
+        <div id="prayer-results">
+          <div id="app" class="container"></div>
+
+          <div id="countDownTimer"></div>
+        </div>
+      </section>
+
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Our Newsletters</h4>
+          <p>
+            Get E-mail updates about our latest shop and
+            <span>special offers.</span>
+          </p>
+        </div>
+        <!--Using Formspree to collect the mails. You can use mailchimp. See documentation-->
+        <form
+          action="https://formspree.io/f/xrgnjzpb"
+          method="POST"
+          class="form"
+          id="form"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+          <button type="submit" class="normal">Sign Up</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="section-p1">
+      <div class="myCol">
+        <img class="logo" src="../../public/img/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address:</strong> 22 Ijede Road Ikorodu Lagos, <br />
+          Nigeria
+        </p>
+        <p><strong>Phone: </strong>+2347062957194</p>
+        <p><strong>Email: </strong>jedybrownventures@gmail.com</p>
+        <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <a href="https://web.facebook.com/" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://twitter.com/OnwubikoSolomo2" target="_blank"
+              ><i class="fab fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/jedidiahonwubiko/"
+              target="_blank"
+              ><i class="fab fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jedidiahonwubiko/"
+              target="_blank"
+              ><i class="fab fab fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCokFadwyrGzW8p0tiST9RuQ"
+              target="_blank"
+              ><i class="fab fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="myCol">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="myCol">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="myCol">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="install">
+          <img src="../../public/img/pay/app.jpg" alt="" />
+          <img src="../../public/img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="../../public/img/pay/pay.png" alt="" />
+      </div>
+    </footer>
+
+    <div class="text-center" id="google_translate_element"></div>
+    <p class="text-center copy" style="font-size: 20px">
+      &copy; 2024, Jedybrown Ventures - Web Developer
+    </p>
+
+    <script src="../scripts/islamic_prayer.js"></script>
+    <script src="../scripts/custom.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>
