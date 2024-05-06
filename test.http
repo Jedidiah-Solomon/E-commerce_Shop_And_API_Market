@@ -1,0 +1,14 @@
+POST http://localhost:5501/updateEmployee
+Content-Type: application/json
+
+{
+  "firstName": "Bortongddd",
+  "lastName":"Anuvvddd",
+  "age": 30,
+  "employedDate": "2022-05-06",
+  "hobby": ["Reading", "Photography"],
+  "street": "123 Main St",
+  "city": "Example City",
+  "zipCode": "12345",
+  "country": "Example Country"
+}

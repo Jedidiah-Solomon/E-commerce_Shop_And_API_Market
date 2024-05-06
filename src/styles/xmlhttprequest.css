@@ -11941,6 +11941,77 @@ textarea.form-control-lg {
   font-weight: 700;
 }
 
+/* Apply flexbox layout to the parent section */
+#xmlhttprequest2 {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+  align-items: flex-start; /* Adjust as needed */
+}
+
+/* Apply flexbox layout to the user-details div */
+#user-details {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Adjust width as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Apply flexbox layout to the user-results div */
+#user-results {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Adjust width as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Apply 100% width to input elements inside user-details */
+#user-details input[type=text] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Apply 100% width to input elements inside user-queries-box */
+#user-queries input[type=text] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Style the button */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #088178;
+  color: #fff;
+}
+button:hover {
+  opacity: 0.75;
+}
+
+h3, .h3 {
+  margin-bottom: 20px;
+}
+
+#user-queries {
+  margin-bottom: 20px;
+}
+
+#userForm label {
+  display: flex;
+  align-items: center;
+}
+
+#userForm input[type=checkbox] {
+  margin-right: 8px;
+}
+
+#userInput-3 {
+  margin-right: 10px;
+  width: 50%;
+}
+
 /* Media Queries */
 /*Ipad*/
 @media (max-width: 799px) {
@@ -11983,5 +12054,11 @@ textarea.form-control-lg {
   #xmlhttprequest #info {
     width: 100%;
     margin-left: 0;
+  }
+  #xmlhttprequest2 {
+    flex-direction: column;
+  }
+  #xmlhttprequest2 #user-results, #xmlhttprequest2 #user-details {
+    width: 100%;
   }
 }

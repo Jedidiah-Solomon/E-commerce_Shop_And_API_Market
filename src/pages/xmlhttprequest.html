@@ -52,7 +52,7 @@
           <li><a href="contact.html">Contact</a></li>
 
           <li class="dropdown_menu">
-            <a class="active" href="javascript:void(0)"
+            <a href="javascript:void(0)"
               >APIs <i class="fa-solid fa-caret-down myFas"></i
             ></a>
 
@@ -164,6 +164,126 @@
         </div>
       </section>
 
+      <section id="xmlhttprequest2" class="section-p1">
+        <div id="user-details">
+          <form id="userForm">
+            <h3>#Enter your details</h3>
+
+            <input
+              type="text"
+              id="userInput-1"
+              name="firstName"
+              placeholder="Enter your first name"
+              required
+            />
+            <input
+              type="text"
+              id="userInput-2"
+              name="lastName"
+              placeholder="Enter your last name"
+              required
+            />
+            <input
+              type="number"
+              id="userInput-3"
+              name="age"
+              placeholder="Age (18 - 65 yrs)"
+              min="18"
+              max="65"
+              required
+            />
+            <input
+              type="date"
+              id="userInput-4"
+              class="px-4"
+              name="employedDate"
+              placeholder="Enter your employment date (2000 - 2050)"
+              min="2000-01-01"
+              max="2050-12-31"
+              required
+            />
+            <h5>Select Your Hobbies:</h5>
+            <div>
+              <label>
+                <input type="checkbox" name="hobby" value="Photography" />
+                Photography
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="Reading" />
+                Reading
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="Traveling" />
+                Traveling
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="Cooking" />
+                Cooking
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="Hiking" />
+                Hiking
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="Music" />
+                Music
+              </label>
+              <label>
+                <input type="checkbox" name="hobby" value="Fishing" />
+                Fishing
+              </label>
+            </div>
+
+            <input
+              type="text"
+              id="userInput-5"
+              name="street"
+              placeholder="Street"
+              required
+            />
+            <input
+              type="text"
+              id="userInput-6"
+              name="city"
+              placeholder="City"
+              required
+            />
+            <input
+              type="text"
+              id="userInput-7"
+              name="zipCode"
+              placeholder="Zip Code"
+              required
+            />
+
+            <input
+              type="text"
+              id="userInput-8"
+              name="country"
+              placeholder="Country"
+              required
+            />
+            <button type="submit" id="userBtn2" class="normal bg-success">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div id="user-results">
+          <div id="user-queries-box" class="">
+            <form id="user-queries">
+              <input
+                type="text"
+                id="firstNameInput"
+                placeholder="Enter first name..."
+              />
+              <button type="submit">Search</button>
+            </form>
+          </div>
+          <div id="user-details-box"></div>
+        </div>
+      </section>
+
       <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
           <h4>Sign Up For Our Newsletters</h4>
@@ -264,6 +384,8 @@
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
 
+    <script src="../scripts/fetch-2.js"></script>
+    <script src="../scripts/fetch-1.js"></script>
     <script src="../scripts/xmlhttprequest.js"></script>
     <script src="../scripts/custom.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

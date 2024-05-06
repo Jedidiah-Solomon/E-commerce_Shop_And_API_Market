@@ -1,0 +1,114 @@
+Step 1: Navigate to Your Project Directory
+Open a terminal or command prompt and change directory to your project directory where you have initialized npm (E-commerce_Shop_And_API_Market).
+
+cd path/to/E-commerce_Shop_And_API_Market
+
+Step 2: Install Express.js
+Ensure you have Node.js installed on your system. If not, download and install it from nodejs.org.
+
+Install Express.js as a dependency in your project using npm:
+
+npm install express
+
+Step 3: Create a Server File
+Create a new JavaScript file (e.g., server.js) in your project directory. This file will contain your Express.js server code.
+
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const port = 5501;
+
+app.use(express.json());
+
+app.post('/updateEmployee', (req, res) => {
+  const newEmployeeData = req.body;
+  
+  // Construct the absolute path to employees.json
+  const filePath = path.join(__dirname, 'database', 'employees.json');
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error reading data file');
+      return;
+    }
+
+    let employees = JSON.parse(data);
+    employees.push(newEmployeeData);
+
+    fs.writeFile(filePath, JSON.stringify(employees, null, 2), (err) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send('Error writing data file');
+        return;
+      }
+
+      res.status(200).send('Employee data updated successfully');
+    });
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
+
+
+Step 4: Start the Server
+Run the following command in your terminal to 
+start the Express.js server:
+
+
+node server.js
+
+Step 5: Access Your Application
+Your Express.js server is now running at http://localhost:5501. You can access this URL in your web browser or send requests to it using client-side JavaScript (e.g., using Fetch API) to interact with your local data file (employees.json).
+In this example:
+
+The server serves static files from a public directory (where your HTML, CSS, and client-side JavaScript
+ files are located).
+It listens for POST requests on the /updateEmployee endpoint.
+When a POST request is received, it reads the existing employees.json file, adds the new employee data to 
+the array, and writes the updated data back to the file.
+To use this approach:
+
+Install Node.js if you haven't already.
+Create a directory structure for your project (e.g., myProject) and navigate to this directory in your terminal
+ or command prompt.
+Initialize a new Node.js project by running npm init -y to create a package.json file.
+Install Express.js by running npm install express.
+Create a new file (e.g., server.js) and paste the above code into it.
+Create a public directory in your project root and place your HTML, CSS, and client-side JavaScript files inside 
+it.
+Start the server by running node server.js in your terminal or command prompt.
+Access your application at http://localhost:5501.
+With this setup, you can now send POST requests to http://localhost:3000/updateEmployee from your client-side 
+code (e.g., using fetch) to interact with your local data file (employees.json) and simulate server-side data 
+management during development. Note that this setup is for development purposes and should not be used in 
+production without appropriate security measures and error handling.
+
+
+INSTALL 'REST CLIENT' VSCODE EXTENSION to check server post request
+
+
+
+
+create a file "text.http'
+
+POST http://localhost:5501/updateEmployee
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 30,
+  "employedDate": "2022-05-06",
+  "hobby": ["Reading", "Photography"],
+  "street": "123 Main St",
+  "city": "Example City",
+  "zipCode": "12345",
+  "country": "Example Country"
+}
+
+and text response.
