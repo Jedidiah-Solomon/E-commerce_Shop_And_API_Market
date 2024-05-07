@@ -1615,6 +1615,38 @@ p.copy {
   font-size: 18px;
 }
 
+/* Check-out */
+#payShip {
+  font-size: 28px;
+}
+#checkout {
+  flex-direction: column;
+ 
+}
+
+#customer-checkout {
+  width: 100%;
+  margin-bottom: 24px;
+  
+}
+
+#customer-checkout form {
+  width: 100%;
+}
+
+#customer-checkout form button {
+  align-self: center;
+  padding: 15px 30px;
+}
+
+#pro-checkout {
+  width: 100%;
+}
+
+#pro-checkout #pro-description h4 {
+  text-align: center;
+}
+
 
 
 }
