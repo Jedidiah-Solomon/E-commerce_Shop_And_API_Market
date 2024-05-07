@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your online store for the best APIs and e-commerce cloth deals."
+    />
+    <meta name="author" content="Jedybrown Stores" />
+    <meta name="keywords" content="e-commerce, APIs, online store" />
+    <link
+      rel="canonical"
+      href="https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/"
+    />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--JQUERY added from NPM Node Modules-->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Minified js for bootstrap-->
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+    <!--League Spartan Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Leaflet-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!--Minified style from bootstrap using Sass to CSS-->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/leaflet.css" />
+
+    <title>E-commerce Shop & API Market</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <a href="../../index.html"
+        ><img src="../../public/img/logo.png" class="logo" alt="Logo"
+      /></a>
+      <div id="navbox">
+        <ul id="navbar">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          <li class="dropdown_menu">
+            <a class="active" href="javascript:void(0)"
+              >APIs <i class="fa-solid fa-caret-down myFas"></i
+            ></a>
+
+            <ul class="dropdown">
+              <li><a href="islamic_prayer.html">Islam</a></li>
+              <li><a href="xmlhttprequest.html">Http</a></li>
+              <li><a href="api3.html">Leaflet</a></li>
+              <li><a href="api4.html">APIs4</a></li>
+            </ul>
+          </li>
+
+          <li id="lg-bag">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fas fa-times"></i></a>
+        </ul>
+      </div>
+
+      <img
+        id="modeIcon"
+        class="dark-theme"
+        src="../../public/img/dark-theme-icon/moon.png"
+        alt=""
+      />
+
+      <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </header>
+
+    <main>
+      <h1>Apartments</h1>
+      <section id="leaflet" class="section-p1">
+        <div id="apartments">
+          <div id="apt1">
+            <img src="../../public/img/leaflet/apt1.jpg" alt="Apartment 1" />
+            <h2>Apartment 1</h2>
+            <p>350 $</p>
+          </div>
+          <div id="apt2">
+            <img src="../../public/img/leaflet/apt2.jpg" alt="Apartment 2" />
+            <h2>Apartment 2</h2>
+            <p>500 $</p>
+          </div>
+          <div id="apt3">
+            <img src="../../public/img/leaflet/apt3.jpg" alt="Apartment 3" />
+            <h2>Apartment 3</h2>
+            <p>550 $</p>
+          </div>
+          <div id="apt4">
+            <img src="../../public/img/leaflet/apt4.jpg" alt="Apartment 4" />
+            <h2>Apartment 4</h2>
+            <p>700 $</p>
+          </div>
+          <div id="apt5">
+            <img src="../../public/img/leaflet/apt5.jpg" alt="Apartment 5" />
+            <h2>Apartment 5</h2>
+            <p>800 $</p>
+          </div>
+          <div id="apt6">
+            <img src="../../public/img/leaflet/apt6.jpg" alt="Apartment 6" />
+            <h2>Apartment 6</h2>
+            <p>930 $</p>
+          </div>
+        </div>
+
+        <div id="map" class="map"></div>
+      </section>
+
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Our Newsletters</h4>
+          <p>
+            Get E-mail updates about our latest shop and
+            <span>special offers.</span>
+          </p>
+        </div>
+        <!--Using Formspree to collect the mails. You can use mailchimp. See documentation-->
+        <form
+          action="https://formspree.io/f/xrgnjzpb"
+          method="POST"
+          class="form"
+          id="form"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+          <button type="submit" class="normal">Sign Up</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="section-p1">
+      <div class="myCol">
+        <img class="logo" src="../../public/img/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address:</strong> 22 Ijede Road Ikorodu Lagos, <br />
+          Nigeria
+        </p>
+        <p><strong>Phone: </strong>+2347062957194</p>
+        <p><strong>Email: </strong>jedybrownventures@gmail.com</p>
+        <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <a href="https://web.facebook.com/" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://twitter.com/OnwubikoSolomo2" target="_blank"
+              ><i class="fab fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/jedidiahonwubiko/"
+              target="_blank"
+              ><i class="fab fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jedidiahonwubiko/"
+              target="_blank"
+              ><i class="fab fab fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCokFadwyrGzW8p0tiST9RuQ"
+              target="_blank"
+              ><i class="fab fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="myCol">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="myCol">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="myCol">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="install">
+          <img src="../../public/img/pay/app.jpg" alt="" />
+          <img src="../../public/img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="../../public/img/pay/pay.png" alt="" />
+      </div>
+    </footer>
+
+    <div class="text-center" id="google_translate_element"></div>
+    <p class="text-center copy" style="font-size: 20px">
+      &copy; 2024, Jedybrown Ventures - Web Developer
+    </p>
+    <script src="../scripts/leafle.js"></script>
+    <script src="../scripts/custom.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Islamic Prayer API - Aladhan */
+/* Leaflet API - MAPS */
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -11845,220 +11845,63 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* Styling the main section */
-#xmlhttprequest {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-#userRequestBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h1, .h1 {
   text-align: center;
-  width: 50%;
+  margin-top: 4px;
 }
-#userRequestBox h2, #userRequestBox .h2 {
-  font-size: 24px;
-  font-weight: 600;
+
+#leaflet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 20px;
 }
-#userRequestBox label {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-#userRequestBox .input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+#map {
   width: 100%;
-  margin-bottom: 20px;
+  height: 900px;
 }
-#userRequestBox .input input[type=text] {
-  flex: 1;
+
+#apartments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   padding: 10px;
-  border: 1.5px solid #D3D3D3;
-  font-size: 16px;
-  transition: box-shadow 0.5s;
-  height: 100%;
-  margin-right: 10px;
-}
-#userRequestBox .input input[type=text]:hover, #userRequestBox .input input[type=text]:focus {
-  box-shadow: 0 0 5px 0.5px #D3D3D3;
-  border: none;
-  outline: none;
-}
-#userRequestBox .input button {
-  font-size: 16px;
-  font-weight: 600;
-  padding: 15px 30px;
-  color: #fff;
-  background-color: #088178;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: box-shadow 0.5s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 100%;
-}
-#userRequestBox .input button:hover {
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0.75;
-}
-#userRequestBox .input button:focus {
-  box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.2);
-}
-#userRequestBox #errorBox {
-  margin-top: 10px;
-}
-#userRequestBox #user-names {
-  margin-top: 20px;
-}
-#userRequestBox #user-names ul {
-  list-style: none;
-  padding: 0;
-}
-#userRequestBox #user-names ul li {
-  font-weight: bold;
+  background-color: azure;
 }
 
-#info {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin-left: 80px;
-}
-
-#info p {
-  text-align: justify;
-}
-
-#info a {
-  text-decoration: none;
-  color: #088178;
-  font-weight: 700;
-}
-
-/* Apply flexbox layout to the parent section */
-#xmlhttprequest2 {
-  display: flex;
-  justify-content: space-around; /* Adjust as needed */
-  align-items: flex-start; /* Adjust as needed */
-}
-
-/* Apply flexbox layout to the user-details div */
-#user-details {
-  display: flex;
-  flex-direction: column;
-  width: 50%; /* Adjust width as needed */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Apply flexbox layout to the user-results div */
-#user-results {
-  display: flex;
-  flex-direction: column;
-  width: 50%; /* Adjust width as needed */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Apply 100% width to input elements inside user-details */
-#user-details input[type=text] {
+#apartments div img {
   width: 100%;
-  margin-bottom: 10px;
 }
 
-/* Apply 100% width to input elements inside user-queries-box */
-#user-queries input[type=text] {
-  width: 100%;
-  margin-bottom: 10px;
+#apartments div img:hover {
+  opacity: 0.5;
+  cursor: zoom-in;
 }
 
-/* Style the button */
-button {
-  padding: 10px 20px;
-  margin-top: 0;
-  cursor: pointer;
-  background-color: #088178;
-  color: #fff;
-}
-button:hover {
-  opacity: 0.75;
-}
-
-h3, .h3 {
-  margin-bottom: 20px;
-}
-
-#user-queries {
-  margin-bottom: 20px;
-}
-
-#userForm label {
-  display: flex;
-  align-items: center;
-}
-
-#userForm input[type=checkbox] {
-  margin-right: 8px;
-}
-
-#userInput-3 {
+#apartments div p {
+  text-align: right;
   margin-right: 10px;
-  width: 50%;
+  font-size: 20px;
 }
 
 /* Media Queries */
-/*Ipad*/
+/* Ipad */
 @media (max-width: 799px) {
-  #userRequestBox {
-    width: 40%;
+  #leaflet {
+    grid-template-columns: 1fr;
   }
-  #userRequestBox h2, #userRequestBox .h2 {
-    font-size: 14.5px;
-    font-weight: 700;
-    text-align: left;
+  #map {
+    order: 1;
+    height: 500px;
   }
-  #userRequestBox .input {
-    flex-direction: column;
-    align-items: normal;
-  }
-  #userRequestBox .input input[type=text] {
-    margin-bottom: 8px;
-    width: 100%;
-  }
-  #userRequestBox .input button {
-    width: 100%;
-  }
-  #info {
-    width: 60%;
-  }
-  #info h3, #info .h3 {
-    font-size: 14.5px;
-    text-align: center;
-    font-weight: 700;
+  #apartments {
+    order: 2;
   }
 }
 /* Iphone x */
 @media (max-width: 477px) {
-  #xmlhttprequest {
-    flex-direction: column;
-  }
-  #xmlhttprequest #userRequestBox {
-    width: 100%;
-  }
-  #xmlhttprequest #info {
-    width: 100%;
-    margin-left: 0;
-  }
-  #xmlhttprequest2 {
-    flex-direction: column;
-  }
-  #xmlhttprequest2 #user-results, #xmlhttprequest2 #user-details {
-    width: 100%;
+  #map {
+    height: 400px;
   }
 }

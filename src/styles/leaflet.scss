@@ -1,0 +1,89 @@
+/* Leaflet API - MAPS */ 
+
+
+// style.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Then add additional custom code here
+
+h1 {
+    text-align: center;
+    margin-top: 4px;
+}
+
+#leaflet{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 20px;  
+} 
+
+#map {
+    width: 100%;
+    height: 900px;
+   
+   
+}
+
+#apartments {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 10px; 
+    padding: 10px;
+    background-color: azure;
+}
+
+#apartments div img {
+    width: 100%;
+}
+
+#apartments div img:hover {
+    opacity: 0.5;
+    cursor:zoom-in;
+}
+
+#apartments div p {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+/* Media Queries */
+
+/* Ipad */
+@media (max-width: 799px) { 
+    #leaflet{
+        grid-template-columns: 1fr;    
+    } 
+
+    #map { 
+        order: 1;
+        height: 500px;
+    
+    }
+    #apartments {
+        order: 2;
+    }
+
+}
+
+
+
+
+
+/* Iphone x */
+@media (max-width: 477px) {
+    #map { 
+        
+        height: 400px;
+    
+    }
+
+}
