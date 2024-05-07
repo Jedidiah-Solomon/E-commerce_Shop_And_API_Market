@@ -11885,6 +11885,40 @@ h1, .h1 {
   font-size: 20px;
 }
 
+/*--------------------Geo-location--------------*/
+#userLocationBox {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 300px;
+  text-align: center;
+}
+
+#userLocationBox p {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+#userLocationBox p::first-line {
+  color: deeppink;
+  font-size: 1.25em;
+  line-height: 50px;
+}
+
+#getLocationBtn, #stopWatchingBtn {
+  background-color: chocolate;
+  padding: 10px 20px;
+  border: 2px solid rgb(3, 87, 83);
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 16px;
+  text-align: center;
+}
+
+#getLocationBtn:hover, #stopWatchingBtn:hover {
+  background-color: rgba(210, 105, 30, 0.676);
+}
+
 /* Media Queries */
 /* Ipad */
 @media (max-width: 799px) {
@@ -11903,5 +11937,15 @@ h1, .h1 {
 @media (max-width: 477px) {
   #map {
     height: 400px;
+  }
+  #userLocationBox {
+    height: 470px;
+  }
+  #getLocationBtn {
+    margin-bottom: 10px;
+    width: 60%;
+  }
+  #stopWatchingBtn {
+    width: 60%;
   }
 }
