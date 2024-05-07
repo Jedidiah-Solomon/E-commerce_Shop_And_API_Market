@@ -2,13 +2,14 @@
   "name": "e-commerce_shop_and_api_market",
   "version": "1.0.1",
   "description": "E-commerce_Shop_And_API_Market is a website that shows e-commerce web products and API endpoints.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "github",
-    "url": "jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/"
+    "url": "https://github.com/jedidiah-solomon/E-commerce_Shop_And_API_Market/"
   },
   "keywords": [
     "E-commerce",
