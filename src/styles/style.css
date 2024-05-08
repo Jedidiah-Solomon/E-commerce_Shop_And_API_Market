@@ -13227,6 +13227,10 @@ p.copy {
   #form-details form {
     width: 50%;
   }
+  /* Cookie Wrapper */
+  #cookie-header h2, #cookie-header .h2 {
+    font-size: 30px;
+  }
 }
 /* Iphone x */
 @media (max-width: 477px) {
