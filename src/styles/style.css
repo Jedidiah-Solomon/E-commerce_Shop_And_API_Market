@@ -13423,4 +13423,8 @@ p.copy {
   #pro-checkout #pro-description h4, #pro-checkout #pro-description .h4 {
     text-align: center;
   }
+  /* Cookie Wrapper */
+  .wrapper.show {
+    right: 10px;
+  }
 }
