@@ -106,7 +106,7 @@ if(close) {
   });
   
 
-  // Google Web Page ranslate
+  //-----------------Google Web Page ranslate---------------------//
 
   function googleTranslateElementInit(){
     new google.translate.TranslateElement(
@@ -116,3 +116,44 @@ if(close) {
 }
 
 
+//------------------------------Cookie Wrapper------------------------//
+
+document.addEventListener("DOMContentLoaded", function() {
+  const cookieBox = document.querySelector(".wrapper");
+  const acceptBtn = document.getElementById("acceptBtn");
+  const declineBtn = document.getElementById("declineBtn");
+
+  const executeCodes = () => {
+    // Check if the cookie contains "jedybrownStores" to decide whether to show the banner
+    if (document.cookie.includes("jedybrownStores")) {
+      cookieBox.classList.remove("show");
+    } else {
+      cookieBox.classList.add("show");
+    }
+  };
+
+  // Function to set cookie with expiration time (in seconds)
+  const setCookie = (name, value, maxAge) => {
+    document.cookie = `${name}=${value}; max-age=${maxAge}; path=/`;
+  };
+
+  // Function to set cookie with specific expiration date and path
+  const setCustomCookie = (name, value, expiresDate) => {
+    document.cookie = `${name}=${value}; Expires=${expiresDate.toUTCString()}; path=/`;
+  };
+
+  // Add event listener to accept button
+  acceptBtn.addEventListener("click", () => {
+    cookieBox.classList.remove("show");
+    setCookie("jedybrownStores", "Welcome to our store", 30 * 24 * 60 * 60); // Cookie expires in 30 days
+    const paymentModeExpires = new Date("2030-05-15T12:00:00+01:00"); // Create a date object for the expiration
+    setCustomCookie("paymentMode", "cash or transfer", paymentModeExpires);
+  });
+
+  // Add event listener to decline button
+  declineBtn.addEventListener("click", () => {
+    cookieBox.classList.remove("show");
+  });
+
+  executeCodes();
+});
