@@ -149,6 +149,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //-----------------------Pop up Ad----------------//
+
+//--------------------Slide from top--------------//
+$(function () {
+  const $popUpAd = $("#popUp-ad");
+
+  const showPopUpAd = () => {
+    $popUpAd.addClass("ad-show");
+  };
+
+  setTimeout(showPopUpAd, 2000);
+});
+
+//------------------Pop up Image---------------//
 const ad1 = "../../public/img/ad/1.jpg";
 const ad2 = "../../public/img/ad/2.jpg";
 const ad3 = "../../public/img/ad/3.jpg";

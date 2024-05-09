@@ -13126,7 +13126,7 @@ p.copy {
 /* Pop up Ad */
 #popUp-ad {
   position: fixed;
-  top: 58%;
+  top: -58%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
@@ -13139,6 +13139,11 @@ p.copy {
   align-items: center;
   justify-content: center;
   background-color: yellow;
+  transition: top 2s ease;
+}
+
+#popUp-ad.ad-show {
+  top: 58%;
 }
 
 #popUp-header {
