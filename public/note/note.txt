@@ -76,3 +76,11 @@ if (this.status == 200) { ... }: Checks if the HTTP status code is 200 (OK), ind
 Parsing JSON Response:
 const data = JSON.parse(this.responseText);: Once the request is complete and successful, the responseText property of the XMLHttpRequest object contains the response data from the server as a string. JSON.parse() is used to convert this JSON-formatted string into a JavaScript object (data), which can then be processed and used in the application.
        
+
+
+
+GitHub Usernames: 
+GitHub Usernames Are Case-Insensitive but Case-Preserving:
+When searching for a user in the GitHub UI or using the API, the case of the username does not matter.
+However, the user found is returned with the proper capitalization defined by the user1.
+In other words, GitHub treats usernames as case-insensitive when searching but preserves the original case when displaying the user’s profile.

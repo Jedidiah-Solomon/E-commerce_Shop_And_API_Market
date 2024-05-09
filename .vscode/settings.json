@@ -1,6 +1,5 @@
 {
-    "liveServer.settings.port": 5501,
-    "liveSassCompile.settings.autoprefix": [],
-    "liveSassCompile.settings.showOutputWindowOn": "Debug"
-    
+  "liveServer.settings.port": 5502,
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.showOutputWindowOn": "Debug"
 }

@@ -1,0 +1,216 @@
+/* Github API */
+
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 80vh;
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+#github-span {
+  position: absolute;
+  top: 95%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+
+#github-me {
+  position: absolute;
+  top: 7%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Github */
+#githubBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#githubBox label {
+  font-size: 24px;
+}
+
+#userInput {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  align-items: flex-start;
+  width: 50%;
+  min-width: 450px;
+  height: 300px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
+}
+#userInput input {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  border: 2px solid rgb(14, 3, 10);
+}
+
+#userInput input::placeholder,
+#userInput2 input::placeholder {
+  text-align: center;
+}
+
+#githubBox button {
+  box-shadow: 0 9px #999;
+  background-color: #025858 !important;
+  font-size: 24px;
+  color: #fff;
+}
+#githubBox button:hover {
+  background-color: hsl(343, 39%, 40%);
+}
+
+#githubBox button:active {
+  background-color: #58053f !important;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#gitHubUser {
+  width: 50%;
+  text-align: center;
+  background-color: #ebd5e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border-radius: 10px;
+}
+
+#gitHubUser img {
+  width: 20%;
+  object-fit: cover;
+  border-radius: 80px;
+}
+
+#gitHubUser span {
+  font-size: 20px;
+
+  a {
+    text-decoration: none;
+    color: #025858;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 799px) {
+  .slider {
+    height: 50vh;
+  }
+  .slider button {
+    top: 54%;
+  }
+}
+
+/* Iphone x */
+@media (max-width: 477px) {
+  .slider {
+    height: 25vh;
+  }
+
+  .slider button {
+    top: 57%;
+    font-size: 1.5rem;
+  }
+
+  #github-span {
+    font-size: 1rem;
+    padding: 7px 8px;
+  }
+
+  #github-me {
+    top: 10.9%;
+    font-size: 0.9rem;
+  }
+
+  #githubBox {
+    flex-direction: column;
+  }
+
+  #userInput,
+  #gitHubUser {
+    width: 100%;
+  }
+
+  #gitHubUser {
+    order: 1;
+  }
+  #userInput {
+    order: 2;
+  }
+  #userInput input {
+    width: 70%;
+  }
+}

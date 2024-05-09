@@ -31,6 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles/github.css">
 
     <!--Minified style from bootstrap using Sass to CSS-->
     <link rel="stylesheet" href="../styles/style.css" />
@@ -45,13 +46,13 @@
       <div id="navbox">
         <ul id="navbar">
           <li><a href="../../index.html">Home</a></li>
-          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="shop.html">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
 
           <li class="dropdown_menu">
-            <a href="javascript:void(0)"
+            <a class="active" href="javascript:void(0)"
               >APIs <i class="fa-solid fa-caret-down myFas"></i
             ></a>
 
@@ -84,146 +85,38 @@
     </header>
 
     <main>
-      <section id="prodetails" class="section-p1">
-        <div class="single-pro-image">
-          <img
-            src="../../public/img/products/f1.jpg"
-            alt=""
-            width="100%"
-            id="MainImg"
-          />
-          <div class="small-img-group">
-            <div class="small-img-col">
-              <img
-                src="../../public/img/products/f1.jpg"
-                width="100%"
-                class="small-img"
-                alt=""
-              />
+        <div class="slider">
+            <div class="slides">
+                <img src="../../public/img/banner/b21.jpg" alt="Banner-hero-1" />
+                <img src="../../public/img/banner/b22.jpg" alt="Banner-hero-2" />
+                <img src="../../public/img/banner/b23.jpg" alt="Banner-hero-3" />
+                <img src="../../public/img/banner/b24.jpg" alt="Banner-hero-4" />
+                <img src="../../public/img/banner/b25.jpg" alt="Banner-hero-5" />
+               
             </div>
-            <div class="small-img-col">
-              <img
-                src="../../public/img/products/f2.jpg"
-                width="100%"
-                class="small-img"
-                alt=""
-              />
-            </div>
-            <div class="small-img-col">
-              <img
-                src="../../public/img/products/f3.jpg"
-                width="100%"
-                class="small-img"
-                alt=""
-              />
-            </div>
-            <div class="small-img-col">
-              <img
-                src="../../public/img/products/f4.jpg"
-                width="100%"
-                class="small-img"
-                alt=""
-              />
-            </div>
-          </div>
+            <button class="prev" onclick="prevSlide()">&#10094</button>
+            <button class="next" onclick="nextSlide()" >&#10095</button>
+            <span id="github-span">Github | API</span>
+            <span id="github-me">Jedididah Solomon | Web Developer</span>
         </div>
-        <div class="single-pro-details">
-          <h6>Home / T-shirts</h6>
-          <h4 id="pro-name">Barcelona Astronaut T-Shirts</h4>
-          <h2 id="pro-price">₦1000.50</h2>
-          <select>
-            <option value="noproduct">Select Size</option>
-            <option value="xl">XL</option>
-            <option value="xxl">XXL</option>
-            <option value="small">Small</option>
-            <option value="large">Large</option>
-          </select>
 
-          <input id="pro-qty" type="number" min="1" value="1" />
-          <button id="pro-btn" class="normal">Add To Cart</button>
-          <h4>Product Details</h4>
-          <span
-            >Take comfort to the next level with adidas men's tees and sports
-            t-shirts. Shop our collection of adidas Originals long and short
-            sleeve t-shirts.Take comfort to the next level with adidas men's
-            tees and sports t-shirts. Shop our collection of adidas Originals
-            long and short sleeve t-shirts.Take comfort to the next level with
-            adidas men's tees and sports t-shirts. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Excepturi, sit? Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Id, voluptas.</span
-          >
+    <div id="githubBox">
+        <!--Github API-->
+        <div id="userInput">
+            <label for="usernameInput" class="">Enter GitHub Username</label>
+            <input type="text" id="usernameInput" placeholder="Username only"><br>
+            <button id="checkUserButton" class="normal">Check User</button>
         </div>
-      </section>
+        <div id="gitHubUser">
+            <img id="userAvatar" src="" alt="">
+            <span id="userName"></span><br>
+            <span id="twitterUsername"></span><br>
+            <span id="publicRepos"></span>
+        </div>
+    </div>
 
-      <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Modern Designs</p>
-        <div class="pro-container">
-          <div class="pro">
-            <img src="../../public/img/products/f1.jpg" alt="" />
-            <div class="des">
-              <span>adidas</span>
-              <h5>Cartoon Astronaut T-Shirts</h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4>₦1,200</h4>
-            </div>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-          <div class="pro">
-            <img src="../../public/img/products/f2.jpg" alt="" />
-            <div class="des">
-              <span>adidas</span>
-              <h5>Cartoon Astronaut T-Shirts</h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4>₦7,800</h4>
-            </div>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-          <div class="pro">
-            <img src="../../public/img/products/f3.jpg" alt="" />
-            <div class="des">
-              <span>adidas</span>
-              <h5>Cartoon Astronaut T-Shirts</h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4>₦5,400</h4>
-            </div>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-          <div class="pro">
-            <img src="../../public/img/products/f4.jpg" alt="" />
-            <div class="des">
-              <span>adidas</span>
-              <h5>Cartoon Astronaut T-Shirts</h5>
-              <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <h4>₦15,000</h4>
-            </div>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </section>
+
+
 
       <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -325,8 +218,8 @@
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
 
+    <script src="../scripts/github.js"></script>
     <script src="../scripts/custom.js"></script>
-    <script src="../scripts/single-product1.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
