@@ -11934,7 +11934,7 @@ button.white {
   justify-content: space-around;
   flex-direction: row;
   padding: 20px 0px 20px 0px;
-  background: #E3E6F3;
+  background: #e3e6f3;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky;
@@ -11963,11 +11963,13 @@ button.white {
   transition: 0.3s ease;
 }
 
-#navbar li a:hover, #navbar li a.active {
+#navbar li a:hover,
+#navbar li a.active {
   color: #088178;
 }
 
-#navbar li a.active::after, #navbar li a:hover::after {
+#navbar li a.active::after,
+#navbar li a:hover::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -12182,7 +12184,7 @@ button.white {
   position: absolute;
   left: 0;
   top: 100%;
-  background-color: #E3E6F3;
+  background-color: #e3e6f3;
   padding-top: 6px;
 }
 
@@ -12369,11 +12371,13 @@ button.white {
   border-bottom-right-radius: 0;
 }
 
-#newsletter input[type=email]:focus:invalid, #form-details input[type=email]:focus:invalid {
+#newsletter input[type=email]:focus:invalid,
+#form-details input[type=email]:focus:invalid {
   border: 2px solid red;
 }
 
-#newsletter input[type=email]:valid, #form-details input[type=email]:valid {
+#newsletter input[type=email]:valid,
+#form-details input[type=email]:valid {
   border: 2px solid #088178;
 }
 
@@ -12398,12 +12402,14 @@ footer .myCol {
   gap: 4px;
 }
 
-footer .myCol:nth-child(2), footer .myCol:nth-child(3) {
+footer .myCol:nth-child(2),
+footer .myCol:nth-child(3) {
   display: flex;
   flex-direction: column;
 }
 
-footer .myCol:nth-child(2) a, footer .myCol:nth-child(3) a {
+footer .myCol:nth-child(2) a,
+footer .myCol:nth-child(3) a {
   text-decoration: none;
   font-size: 16px;
   color: #465b52;
@@ -12431,23 +12437,23 @@ footer .myCol .install img {
 }
 
 .follow .icon a[href*="facebook.com"] i {
-  color: #1877F2;
+  color: #1877f2;
 }
 
 .follow .icon a[href*="twitter.com"] i {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .follow .icon a[href*="instagram.com"] i {
-  color: #E4405F;
+  color: #e4405f;
 }
 
 .follow .icon a[href*="linkedin.com"] i {
-  color: #0077B5;
+  color: #0077b5;
 }
 
 .follow .icon a[href*="youtube.com"] i {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 /* Customize the appearance of the google translate dropdown */
@@ -12704,11 +12710,14 @@ p.copy {
   width: 40%;
 }
 
-#contact-details .details span, #form-details form span {
+#contact-details .details span,
+#form-details form span {
   font-size: 14px;
 }
 
-#contact-details .details h2, #contact-details .details .h2, #form-details form h2, #form-details form .h2 {
+#contact-details .details h2, #contact-details .details .h2,
+#form-details form h2,
+#form-details form .h2 {
   font-size: 28px;
   line-height: 35px;
   padding: 20px 0;
@@ -12760,7 +12769,8 @@ p.copy {
   align-items: flex-start;
 }
 
-#form-details form input, #form-details form textarea {
+#form-details form input,
+#form-details form textarea {
   width: 100%;
   padding: 20px 15px;
   outline: none;
@@ -13013,11 +13023,13 @@ p.copy {
   opacity: 0.75;
 }
 
-#customer-checkout form input[type=email]:focus:invalid, #form-details input[type=email]:focus:invalid {
+#customer-checkout form input[type=email]:focus:invalid,
+#form-details input[type=email]:focus:invalid {
   border: 2px solid red;
 }
 
-#customer-checkout form input[type=email]:valid, #form-details input[type=email]:valid {
+#customer-checkout form input[type=email]:valid,
+#form-details input[type=email]:valid {
   border: 2px solid #088178;
 }
 
@@ -13111,6 +13123,85 @@ p.copy {
   color: #fff;
 }
 
+/* Pop up Ad */
+#popUp-ad {
+  position: fixed;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 450px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+}
+
+#popUp-header {
+  text-align: center;
+  margin-bottom: 1px;
+}
+#popUp-header p {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+}
+#popUp-header p a {
+  text-decoration: none;
+  color: red;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#popUp-body {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+#popUp-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#offer-discount {
+  position: absolute;
+  top: 0px;
+  left: 362px;
+  background-color: red;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#offer-delivery {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.close-icon {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+
 /* Media Queries */
 @media (max-width: 799px) {
   /* Global style */
@@ -13128,7 +13219,7 @@ p.copy {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: #E3E6F3;
+    background-color: #e3e6f3;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 0.3s;
