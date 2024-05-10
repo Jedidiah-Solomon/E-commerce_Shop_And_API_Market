@@ -163,6 +163,71 @@ img.displaySlide {
     cursor: pointer;
   }
 }
+/*  Open Weather Map */
+#openWeatherMap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#openWeatherMap .weatherForm {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  padding: 0 10px;
+}
+#openWeatherMap .weatherForm input {
+  width: 60%;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 20px;
+  font-size: 24px;
+
+  &::placeholder {
+    padding: 0 30px;
+    font-size: 24px;
+  }
+}
+#openWeatherMap .weatherForm button {
+  background-color: #025858;
+  color: #fff;
+  font-size: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+#openWeatherMap .myCard {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-left: 40px;
+  background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  text-align: center;
+}
+
+#openWeatherMap .myCard p {
+  font-size: 24px;
+}
+
+#openWeatherMap .myCard p:nth-child(5) {
+  color: yellow;
+}
+
+.errorDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75);
+}
 
 /* Media Queries */
 @media (max-width: 799px) {
