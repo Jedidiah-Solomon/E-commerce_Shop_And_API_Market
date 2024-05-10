@@ -230,12 +230,33 @@ img.displaySlide {
 }
 
 /* Media Queries */
+/* Ipad */
 @media (max-width: 799px) {
   .slider {
     height: 50vh;
   }
   .slider button {
     top: 54%;
+  }
+  #openWeatherMap {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  #openWeatherMap .weatherForm {
+    width: 100%;
+    order: 2;
+  }
+
+  #openWeatherMap .myCard {
+    width: 100%;
+  }
+
+  #openWeatherMap .weatherForm input {
+    width: 65%;
+  }
+  #openWeatherMap .weatherForm button {
+    width: 35%;
   }
 }
 
@@ -277,5 +298,16 @@ img.displaySlide {
   }
   #userInput input {
     width: 70%;
+  }
+
+  #openWeatherMap .weatherForm {
+    flex-direction: column;
+  }
+  #openWeatherMap .weatherForm input {
+    width: 100%;
+    height: 60px;
+  }
+  #openWeatherMap .weatherForm button {
+    width: 100%;
   }
 }
