@@ -4,11 +4,17 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors()); // Enable CORS for all routes
 
+app.use(express.static(path.join(__dirname, "public")));
+
+// Serve static files from the "src" directory
+app.use(express.static(path.join(__dirname, "src")));
+
+// Serve the index.html file from the root directory
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
