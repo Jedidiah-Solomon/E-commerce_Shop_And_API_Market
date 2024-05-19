@@ -28,7 +28,13 @@ E-commerce_Shop_And_API_Market is a website that shows e-commerce web products a
 
 ## Domain
 
-<a href="https://e-commerce-shop-and-api-market.onrender.com/index.html" target="_blank">E-commerce_Shop_And_API_Market</a>
+##### Static Version
+
+<a href="https://e-commerce-shop-and-api-market.onrender.com/" target="_blank">E-commerce_Shop_And_API_Market</a>
+
+##### Server Version
+
+<a href="https://e-commerce-shop-and-api-market-2.onrender.com/" target="_blank">E-commerce_Shop_And_API_Market_2</a>
 
 **Run with Localhost if your port is 5500**
 
