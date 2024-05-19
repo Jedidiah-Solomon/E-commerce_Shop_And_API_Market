@@ -16,6 +16,7 @@ app.use("/styles", express.static(path.join(__dirname, "src/styles")));
 app.use("/scripts", express.static(path.join(__dirname, "src/scripts")));
 app.use("/pages", express.static(path.join(__dirname, "src/pages")));
 app.use("/img", express.static(path.join(__dirname, "public/img")));
+app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 
 // Serve the index.html file from the root directory
 app.get("/", (req, res) => {
