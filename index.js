@@ -2,6 +2,7 @@ const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config(); // Add this line to load environment variables for local machine using .env file
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -37,6 +38,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+// Serve home.html from the root directory
+app.get("/home.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
+
 // Sign-up endpoint
 app.post("/signup", (req, res) => {
   const { username, email, password } = req.body;
@@ -66,6 +72,29 @@ app.post("/signup", (req, res) => {
 
       res.status(201).json({ message: "Sign up successful" });
     });
+  });
+});
+
+// Login endpoint
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
+  const loginQuery = "SELECT * FROM members WHERE email = ? AND password = ?";
+  db.query(loginQuery, [email, password], (err, results) => {
+    if (err) {
+      console.error("Error checking login credentials:", err);
+      return res.status(500).json({ message: "Internal server error" });
+    }
+
+    if (results.length === 0) {
+      return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    res.status(200).json({ message: "Login successful" });
   });
 });
 

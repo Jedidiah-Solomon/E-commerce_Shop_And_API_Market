@@ -11902,6 +11902,12 @@ p {
   margin: 40px 0;
 }
 
+/* Welcome Message */
+#welcome-message {
+  font-size: 20px;
+  margin: 0;
+}
+
 button.normal {
   font-size: 14px;
   font-weight: 600;

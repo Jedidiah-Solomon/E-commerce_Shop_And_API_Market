@@ -3,6 +3,29 @@ const bar = document.getElementById("bar");
 const close = document.getElementById("close");
 const nav = document.getElementById("navbar");
 
+/* Welcome Message */
+const welcomeMessage = document.getElementById("welcome-message");
+
+// Check if the welcome message is visible
+const isWelcomeMessageVisible = () => {
+  return welcomeMessage.style.display !== "none";
+};
+
+if (!sessionStorage.getItem("welcomeDisplayed")) {
+  welcomeMessage.style.display = "block";
+
+  sessionStorage.setItem("welcomeDisplayed", true);
+
+  setTimeout(() => {
+    if (isWelcomeMessageVisible()) {
+      welcomeMessage.style.display = "none";
+    }
+  }, 7000);
+} else {
+  welcomeMessage.style.display = "none";
+}
+
+/*  Nav bar */
 if (bar) {
   bar.addEventListener("click", () => {
     nav.classList.add("active");
