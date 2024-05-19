@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your online store for the best APIs and e-commerce cloth deals."
+    />
+    <meta name="author" content="Jedybrown Stores" />
+    <meta name="keywords" content="e-commerce, APIs, online store" />
+    <link
+      rel="canonical"
+      href="https://jedidiah-solomon.github.io/E-commerce_Shop_And_API_Market/"
+    />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--JQUERY added from NPM Node Modules-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Minified js for bootstrap-->
+    <script src="./src/scripts/bootstrap.bundle.min.js"></script>
+    <!--League Spartan Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Minified style from bootstrap using Sass to CSS-->
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>E-commerce Shop & API Market</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <a href="index.html"
+        ><img src="./public/img/logo.png" class="logo" alt="Logo"
+      /></a>
+      <div id="navbox">
+        <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="./src/pages/shop.html">Shop</a></li>
+          <li><a href="./src/pages/blog.html">Blog</a></li>
+          <li><a href="./src/pages/about.html">About</a></li>
+          <li><a href="./src/pages/contact.html">Contact</a></li>
+
+          <li class="dropdown_menu">
+            <a href="javascript:void(0)"
+              >APIs <i class="fa-solid fa-caret-down myFas"></i
+            ></a>
+
+            <ul class="dropdown">
+              <li>
+                <a href="./src/pages/islamic_prayer.html">Islamic Prayer</a>
+              </li>
+              <li>
+                <a href="./src/pages/xmlhttprequest.html">XMLHTTPRequest</a>
+              </li>
+              <li><a href="./src/pages/leaflet.html">Leaflet</a></li>
+              <li><a href="./src/pages/github.html">Github</a></li>
+            </ul>
+          </li>
+
+          <li id="lg-bag">
+            <a href="./src/pages/cart.html"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="far fas fa-times"></i></a>
+        </ul>
+      </div>
+
+      <img
+        id="modeIcon"
+        class="dark-theme"
+        src="./public/img/dark-theme-icon/moon.png"
+        alt=""
+      />
+
+      <div id="mobile">
+        <a href="./src/pages/cart.html"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </header>
+    <main>
+      <section id="hero">
+        <h4>Buy-and-enjoy</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & up to 30% off!</p>
+        <button>Shop Now</button>
+      </section>
+
+      <section id="feature" class="section-p1">
+        <div class="fe-box">
+          <img src="./public/img/features/f1.png" alt="Feature image 1" />
+          <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+          <img src="./public/img/features/f2.png" alt="Feature image 2" />
+          <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+          <img src="./public/img/features/f3.png" alt="Feature image 3" />
+          <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+          <img src="./public/img/features/f4.png" alt="Feature image 4" />
+          <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+          <img src="./public/img/features/f5.png" alt="Feature image 5" />
+          <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+          <img src="./public/img/features/f6.png" alt="Feature image 6" />
+          <h6>F24/7 Support</h6>
+        </div>
+      </section>
+
+      <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Designs</p>
+        <div class="pro-container">
+          <div class="pro">
+            <img src="./public/img/products/f1.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦8,500</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f2.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦7800</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f3.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦5,400</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f4.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦15,000</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f5.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦12,000</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f6.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦4,800</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f7.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦6,500</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/f8.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦9,800</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="banner" class="section-m1">
+        <h4>Season Sales</h4>
+        <h2>Up to <span>70% Off</span> - All t-shirts & Accessories</h2>
+        <button class="normal">Explore More</button>
+      </section>
+      <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Modern Designs</p>
+        <div class="pro-container">
+          <div class="pro">
+            <img src="./public/img/products/n1.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦8,500</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n2.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦7800</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n3.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦5,400</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n4.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦15,000</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n5.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦12,000</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n6.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦4,800</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n7.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦6,500</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+          <div class="pro">
+            <img src="./public/img/products/n8.jpg" alt="" />
+            <div class="des">
+              <span>adidas</span>
+              <h5>Cartoon Astronaut T-Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>₦9,800</h4>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+          <h4>crady deals</h4>
+          <h2>buy 1 get 1 free</h2>
+          <span>The best classic dress is on sale at Jedybrown store</span>
+          <button class="white">Learn More</button>
+        </div>
+
+        <div class="banner-box banner-box2">
+          <h4>spring/summer</h4>
+          <h2>upcoming season</h2>
+          <span>The best classic dress is on sale at Jedybrown store</span>
+          <button class="white">Collection</button>
+        </div>
+      </section>
+
+      <section id="banner3">
+        <div class="banner-box">
+          <h2>SEASON SALES</h2>
+          <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+          <h2>NEW FOOTWEAR COLLECTION</h2>
+          <h3>Spring/ Summer 2024</h3>
+        </div>
+        <div class="banner-box banner-box3">
+          <h2>T-SHIRTS</h2>
+          <h3>Best Naija T-shirts</h3>
+        </div>
+      </section>
+
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Our Newsletters</h4>
+          <p>
+            Get E-mail updates about our latest shop and
+            <span>special offers.</span>
+          </p>
+        </div>
+        <!--Using Formspree to collect the mails. You can use mailchimp. See documentation-->
+        <form
+          action="https://formspree.io/f/xrgnjzpb"
+          method="POST"
+          class="form"
+          id="form"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+          <button type="submit" class="normal">Sign Up</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="section-p1">
+      <div class="myCol">
+        <img class="logo" src="./public/img/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address:</strong> 22 Ijede Road Ikorodu Lagos, <br />
+          Nigeria
+        </p>
+        <p><strong>Phone: </strong>+2347062957194</p>
+        <p><strong>Email: </strong>jedybrownventures@gmail.com</p>
+        <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <a href="https://web.facebook.com/" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://twitter.com/OnwubikoSolomo2" target="_blank"
+              ><i class="fab fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/jedidiahonwubiko/"
+              target="_blank"
+              ><i class="fab fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jedidiahonwubiko/"
+              target="_blank"
+              ><i class="fab fab fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCokFadwyrGzW8p0tiST9RuQ"
+              target="_blank"
+              ><i class="fab fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="myCol">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="myCol">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="myCol">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="install">
+          <img src="./public/img/pay/app.jpg" alt="" />
+          <img src="./public/img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="./public/img/pay/pay.png" alt="" />
+      </div>
+    </footer>
+    <div class="text-center" id="google_translate_element"></div>
+    <p class="text-center copy" style="font-size: 20px">
+      &copy; 2024, Jedybrown Ventures - Web Developer
+    </p>
+
+    <div class="wrapper section-p1">
+      <header id="cookie-header">
+        <i class="bx bx-cookie"></i>
+        <h2>Cookies Consent</h2>
+      </header>
+
+      <div class="data">
+        <p>
+          This website use cookies to help you have a superior and more relevant
+          browsing experience on the website.
+          <a href="https://www.aboutcookies.org/" target="_blank">
+            Read more...</a
+          >
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button class="button" id="acceptBtn">Accept</button>
+        <button class="button" id="declineBtn">Decline</button>
+      </div>
+    </div>
+
+    <div id="popUp-ad" class="">
+      <div id="popUp-header">
+        <p>
+          Time Before Offer Last
+          <a href="./src/pages/shop.html"><span>Shop Now</span></a>
+        </p>
+        <p id="clock">00d 55h 44m 77s</p>
+      </div>
+      <div id="popUp-body">
+        <img id="popup-image" src="" alt="Season discount offer" />
+        <span id="offer-discount">-41%</span>
+        <span id="offer-delivery">Pay on Delivery</span>
+      </div>
+      <span><i class="fa-regular fa-circle-xmark close-icon"></i></span>
+    </div>
+
+    <script src="./src/scripts/custom.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

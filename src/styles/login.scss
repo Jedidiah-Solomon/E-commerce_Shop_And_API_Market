@@ -1,0 +1,76 @@
+// style.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+.btn-primary {
+  --bs-btn-bg: #088178;
+  --bs-btn-border-color: #088178;
+  --bs-btn-hover-bg: #07544f;
+  --bs-btn-disabled-bg: #088178;
+  --bs-btn-disabled-border-color: #088178;
+}
+
+// Then add additional custom code here
+
+/* Root-level custom properties */
+$primary-color: #333;
+$secondary-color: #222;
+$text-color: #465b52;
+$bg-color: #e3e6f3;
+$font-stack: "League Spartan", sans-serif;
+$base-padding: 1rem;
+$box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+$link-color: #1a1a1a;
+$hover-color: #088178;
+$black-mode: #000106;
+$base-font-size: 16px;
+$border-color: #cce7d0;
+
+/*---------------------------------- Header Section----------------------------------------------------------- */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 10px 20px;
+  border-bottom: 0.5px solid grey;
+  background-color: rgb(208, 202, 214);
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 4px;
+}
+main {
+  background-image: url("../../public/img/banner_member.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-right: 300px;
+}
+
+#navbar li {
+  list-style: none;
+  font-size: 24px;
+}
+#navbar li a {
+  text-decoration: none;
+  color: $hover-color;
+  font-weight: 600;
+}
+// Custom styles for the signup page
+
+.signup-box {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

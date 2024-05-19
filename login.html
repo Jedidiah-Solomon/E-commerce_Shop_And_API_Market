@@ -37,14 +37,16 @@
       rel="stylesheet"
     />
 
-    <!--Minified style from bootstrap using Sass to CSS-->
-    <link rel="stylesheet" href="./src/styles/pre-style.css" />
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="./src/styles/login.css" />
+
     <title>E-commerce Shop & API Market</title>
   </head>
 
   <body>
     <header>
-      <a href="#"
+      <a href="index.html"
         ><img src="./public/img/logo.png" class="logo" alt="Logo"
       /></a>
       <ul id="navbar">
@@ -61,31 +63,26 @@
         <li><a class="" id="" href="sign_up.html">Join</a></li>
       </ul>
     </header>
-    <main>
-      <div class="hero">
-        <div class="slide visible">
-          <img src="./public/img/image1.png" alt="Hero Image 1" />
-          <div class="text-overlay">Like my shop, come buy from us</div>
-        </div>
 
-        <div class="slide hidden">
-          <img src="./public/img/image2.png" alt="Hero Image 2" />
-          <div class="text-overlay">
-            <span class="joinUs">Be our Member</span>
-            <div class="buttons">
-              <a href="login.html">Login👆🏻</a>
-              <a href="sign_up.html">Join☝🏻</a>
-            </div>
+    <main class="d-flex justify-content-center align-items-center min-vh-100">
+      <div class="signup-box p-4 shadow-lg">
+        <h2 class="text-center mb-4">Welcome | Login</h2>
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required />
           </div>
-        </div>
-
-        <div class="slide hidden">
-          <img src="./public/img/image3.png" alt="Hero Image 3" />
-          <div class="text-overlay">Best cloth shop in Nigeria Market</div>
-        </div>
-
-        <div class="arrow left-arrow"><i class="fas fa-arrow-left"></i></div>
-        <div class="arrow right-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
       </div>
     </main>
 
@@ -93,7 +90,5 @@
     <p class="text-center copy" style="font-size: 20px">
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
-
-    <script src="./src/scripts/pre-custom.js"></script>
   </body>
 </html>

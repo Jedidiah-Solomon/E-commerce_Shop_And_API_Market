@@ -1,0 +1,196 @@
+// style.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+/* Root-level custom properties */
+$primary-color: #333;
+$secondary-color: #222;
+$text-color: #465b52;
+$bg-color: #e3e6f3;
+$font-stack: "League Spartan", sans-serif;
+$base-padding: 1rem;
+$box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.06);
+$link-color: #1a1a1a;
+$hover-color: #088178;
+$black-mode: #000106;
+$base-font-size: 16px;
+$border-color: #cce7d0;
+
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  width: 100%;
+}
+
+/* Other styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: $secondary-color;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: $secondary-color;
+}
+
+h3 {
+  font-size: sizeMultiplier(2, $base-font-size);
+  color: setColor(32px);
+}
+
+h4 {
+  font-size: 20px;
+  color: $secondary-color;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: $text-color;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+/*---------------------------------- Header Section----------------------------------------------------------- */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 10px 20px;
+  border-bottom: 0.5px solid grey;
+  background-color: rgb(208, 202, 214);
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 4px;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-right: 300px;
+}
+
+#navbar li {
+  list-style: none;
+  font-size: 24px;
+}
+#navbar li a {
+  text-decoration: none;
+  color: $hover-color;
+  font-weight: 600;
+}
+/*------------------------------------ Hero Image Slider----------------------------------------------------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .slide.visible {
+  opacity: 1;
+}
+
+.hero .slide.hidden {
+  opacity: 0;
+}
+
+.hero .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px 5px 15px;
+  cursor: pointer;
+}
+
+.hero .left-arrow {
+  left: 10px;
+  border-radius: 5px;
+}
+
+.hero .right-arrow {
+  right: 10px;
+  border-radius: 5px;
+}
+
+/* Text overlay */
+.text-overlay {
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 40px;
+}
+.text-overlay span {
+  font-size: 40px;
+  text-align: start;
+  padding: 0 70px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons a {
+  cursor: pointer;
+  padding: 10px 40px;
+  font-size: 30px;
+  background-color: $hover-color;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+
+  transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+  background-color: #fff;
+  color: #f39c12;
+}
