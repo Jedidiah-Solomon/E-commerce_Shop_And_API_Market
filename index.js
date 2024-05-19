@@ -33,8 +33,15 @@ app.post("/signup", (req, res) => {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  // Check if the email is already registered
-  const members = JSON.parse(fs.readFileSync(membersFilePath));
+  // Read existing members from file
+  let members = [];
+  try {
+    members = JSON.parse(fs.readFileSync(membersFilePath));
+  } catch (error) {
+    console.error("Error reading members file:", error);
+  }
+
+  // Check if email already exists
   const existingMember = members.find((member) => member.email === email);
   if (existingMember) {
     return res.status(400).json({ message: "Email already exists" });
