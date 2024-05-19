@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "./login.html";
     } catch (error) {
       console.error("Error:", error.message);
-      alert("Sign up failed. Please try again.");
+      alert(`Sign up failed: ${error.message}`);
     }
   });
 });

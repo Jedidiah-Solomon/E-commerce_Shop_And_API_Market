@@ -43,3 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize the first slide
   showSlide(currentSlideIndex);
 });
+
+//----------------Copy Year Date-------------//
+const copyYear = document.getElementById("copy-year");
+
+date = new Date();
+date = date.getFullYear();
+copyYear.textContent = date;
+
+console.log(date);
+console.log(copyYear);

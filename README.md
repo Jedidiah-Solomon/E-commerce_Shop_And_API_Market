@@ -32,7 +32,23 @@ E-commerce_Shop_And_API_Market is a website that shows e-commerce web products a
 
 **Run with Localhost if your port is 5500**
 
+**npm run dev - for development** or **npm start - for production**
+
 ```
 http://127.0.0.1:5500/index.html
 
+```
+
+## Use Expressjs server
+
+1. Entry point index.js
+2. Launch a "web service" in render.com using github - create PORT 8080 environment varible for port
+
+3. open account in freesqldatabase.com - use th credentials sent to your mail, then create enviriment variables to encode those credentials.
+
+```
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE,
 ```
