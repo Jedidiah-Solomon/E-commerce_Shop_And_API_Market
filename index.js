@@ -12,10 +12,10 @@ app.use(cors()); // Enable CORS for all routes
 app.use(express.static(path.join(__dirname, "public")));
 
 // Serve static files from the "src" and "public" directories
-app.use("/styles", express.static(path.join(__dirname, "src/styles")));
-app.use("/scripts", express.static(path.join(__dirname, "src/scripts")));
-app.use("/pages", express.static(path.join(__dirname, "src/pages")));
-app.use("/img", express.static(path.join(__dirname, "public/img")));
+app.use("/src/styles", express.static(path.join(__dirname, "src/styles")));
+app.use("/src/scripts", express.static(path.join(__dirname, "src/scripts")));
+app.use("/src/pages", express.static(path.join(__dirname, "src/pages")));
+app.use("/public/img", express.static(path.join(__dirname, "public/img")));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 
 // Serve the index.html file from the root directory

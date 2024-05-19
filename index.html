@@ -19,7 +19,7 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!-- Font Awesome CDN -->
+    <!--Font Awesome CDN-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -27,38 +27,49 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Google Font -->
+    <!--JQUERY added from NPM Node Modules-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!--Minified js for bootstrap-->
+    <script src="./src/scripts/bootstrap.bundle.min.js"></script>
+    <!--League Spartan Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/styles/pre-style.css" />
+
+    <!--Minified style from bootstrap using Sass to CSS-->
+    <link rel="stylesheet" href="./src/styles/pre-style.css" />
     <title>E-commerce Shop & API Market</title>
   </head>
+
   <body>
     <header>
-      <a href="/"><img src="/img/logo.png" class="logo" alt="Logo" /></a>
+      <a href="#"
+        ><img src="./public/img/logo.png" class="logo" alt="Logo"
+      /></a>
       <ul id="navbar">
-        <li><a href="login.html">Login</a></li>
+        <li><a class="" id="" href="login.html">Login</a></li>
         <li>
           <a
-            href="https://www.linkedin.com/in/jedidiahonwubiko/"
+            class=""
+            id=""
             target="_blank"
+            href="https://www.linkedin.com/in/jedidiahonwubiko/"
             >Jedidiah</a
           >
         </li>
-        <li><a href="sign_up.html">Join</a></li>
+        <li><a class="" id="" href="sign_up.html">Join</a></li>
       </ul>
     </header>
     <main>
       <div class="hero">
         <div class="slide visible">
-          <img src="/img/image1.png" alt="Hero Image 1" />
+          <img src="./public/img/image1.png" alt="Hero Image 1" />
           <div class="text-overlay">Like my shop, come buy from us</div>
         </div>
+
         <div class="slide hidden">
-          <img src="/img/image2.png" alt="Hero Image 2" />
+          <img src="./public/img/image2.png" alt="Hero Image 2" />
           <div class="text-overlay">
             <span class="joinUs">Be our Member</span>
             <div class="buttons">
@@ -67,21 +78,22 @@
             </div>
           </div>
         </div>
+
         <div class="slide hidden">
-          <img src="/img/image3.png" alt="Hero Image 3" />
+          <img src="./public/img/image3.png" alt="Hero Image 3" />
           <div class="text-overlay">Best cloth shop in Nigeria Market</div>
         </div>
+
         <div class="arrow left-arrow"><i class="fas fa-arrow-left"></i></div>
         <div class="arrow right-arrow"><i class="fas fa-arrow-right"></i></div>
       </div>
     </main>
+
     <div class="text-center" id="google_translate_element"></div>
     <p class="text-center copy" style="font-size: 20px">
       &copy; 2024, Jedybrown Ventures - Web Developer
     </p>
-    <!-- Scripts -->
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="/scripts/bootstrap.bundle.min.js"></script>
-    <script src="/scripts/pre-custom.js"></script>
+
+    <script src="./src/scripts/pre-custom.js"></script>
   </body>
 </html>
