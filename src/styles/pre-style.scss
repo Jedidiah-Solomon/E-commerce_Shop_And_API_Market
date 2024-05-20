@@ -319,7 +319,7 @@ header {
     border-radius: 5px;
     font-size: 20px;
     width: 100%;
-    padding-left: 100px;
+    padding-left: 90px;
   }
 
   .text-overlay span {
@@ -337,6 +337,7 @@ header {
     cursor: pointer;
     font-size: 25px;
     transition: background-color 0.3s;
+    padding: 10px 20px;
   }
 
   .buttons a:hover {
