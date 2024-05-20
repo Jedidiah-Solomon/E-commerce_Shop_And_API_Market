@@ -41,6 +41,14 @@ header {
   box-shadow: 2px 2px 2px grey;
   border-radius: 4px;
 }
+/* Hamburger button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 main {
   background-image: url("../../public/img/banner_member.jpg");
   background-position: center;
@@ -73,4 +81,94 @@ main {
   max-width: 400px;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Media Queries */
+
+/*  Ipad */
+@media (max-width: 799px) {
+  body {
+    overflow: hidden;
+    height: 450px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* Ensure that all child elements respect the box-sizing rule */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  header {
+    overflow: hidden;
+  }
+
+  #navbar {
+    display: flex;
+
+    gap: 30px;
+    padding-right: 100px;
+  }
+
+  .align-items-center {
+    align-items: normal !important;
+  }
+  .min-vh-100 {
+    min-height: 54vh !important;
+  }
+  .signup-box {
+    border-radius: 0;
+    height: 553px;
+    width: 800px;
+    max-width: 800px;
+  }
+
+  .copy {
+    font-size: 17px !important;
+    padding-left: 7px !important;
+    font-weight: 400;
+  }
+}
+/* Iphone x */
+@media (max-width: 477px) {
+  /* Hide the navbar and show the hamburger button on small screens */
+  #navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #d0cad6;
+    border: 1px solid #ccc;
+  }
+
+  #navbar.show {
+    display: flex;
+    z-index: 999;
+    padding: 5px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .align-items-center {
+    align-items: normal !important;
+  }
+  .min-vh-100 {
+    min-height: 54vh !important;
+  }
+  .signup-box {
+    border-radius: 0;
+    height: 400px;
+  }
+
+  .copy {
+    font-size: 17px !important;
+    padding-left: 7px !important;
+    font-weight: 400;
+  }
 }
