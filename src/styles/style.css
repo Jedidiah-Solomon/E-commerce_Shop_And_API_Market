@@ -13213,6 +13213,11 @@ p.copy {
   color: black;
 }
 
+#logoutButton {
+  text-decoration: none;
+  color: red;
+}
+
 /* Media Queries */
 @media (max-width: 799px) {
   /* Global style */

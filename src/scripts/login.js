@@ -32,6 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error(errorMessage.message);
       }
 
+      // Save session data to localStorage
+      const expirationTime = new Date().getTime() + 60 * 60 * 1000; //This is what is used
+      localStorage.setItem("loggedIn", true);
+      localStorage.setItem("expirationTime", expirationTime);
+      localStorage.setItem("userEmail", email); //Just for adding sake no use for now.
+
+      console.log("Login successful, expirationTime:", expirationTime); // Debugging log
+
       alert("Login successful!");
       loginForm.reset();
       setTimeout(() => {
